@@ -1,0 +1,285 @@
+@font-face {
+  font-family: myxxx;
+  src: url(111111.ttf);
+}
+.header {
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+  z-index: 999;
+}
+.header .header-content {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header .header-content img {
+  display: block;
+}
+.header .header-content span {
+  display: block;
+}
+.header .header-content span a {
+  text-decoration: none;
+  color: #A4A4A4;
+  margin-left: 40px;
+  font-size: 16px;
+}
+.mySwiper {
+  height: 100%;
+  width: 100%;
+  background-color: #010001;
+}
+.mySwiper .swiper-wrapper .one {
+  background-image: url(t01a11874d1bb2ca506.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-color: #010001;
+}
+.mySwiper .swiper-wrapper .one .box-title {
+  position: relative;
+  top: -125px;
+}
+.mySwiper .swiper-wrapper .one .box-title .box-title-h {
+  color: white;
+  font-size: 60px;
+  letter-spacing: 4px;
+  margin: 0;
+}
+.mySwiper .swiper-wrapper .one .box-title .box-title-p {
+  font-size: 22px;
+  color: white;
+  margin: 8px 0 36px 0;
+}
+.mySwiper .swiper-wrapper .one .box-title span {
+  display: flex;
+  justify-content: center;
+}
+.mySwiper .swiper-wrapper .one .box-title span a {
+  width: 178px;
+  height: 58px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 16px;
+}
+.mySwiper .swiper-wrapper .one .box-title span a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.mySwiper .swiper-wrapper .one .box-title span a p {
+  width: 40px;
+  height: 20px;
+  color: white;
+  background-color: #FF6363;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 8px 2px;
+  position: absolute;
+  top: -20px;
+  right: -8px;
+}
+.mySwiper .swiper-wrapper .one .box-title span a:nth-child(1) {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.mySwiper .swiper-wrapper .one .box-title span a:nth-child(2) {
+  color: black;
+  background-color: white;
+}
+@keyframes header-dh {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.mySwiper .swiper-wrapper .one .box-title .mask {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  right: calc(50% - 450px);
+  opacity: 0;
+  animation-name: header-dh;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  z-index: -1;
+}
+@keyframes pic-one {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -25px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+.mySwiper .swiper-wrapper .one .pic1 {
+  width: 202px;
+  height: 202px;
+  position: absolute;
+  left: 20%;
+  top: 22.7%;
+  z-index: -1;
+  animation-name: pic-one;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes pci-two {
+  0% {
+    margin-top: -25px;
+  }
+  50% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -25px;
+  }
+}
+.mySwiper .swiper-wrapper .one .pic2 {
+  width: 342px;
+  height: 342px;
+  position: absolute;
+  left: 65.16%;
+  top: 49.8%;
+  z-index: -1;
+  animation-name: pci-two;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes pci-three {
+  0% {
+    transform: rotate(320deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(320deg);
+  }
+}
+.mySwiper .swiper-wrapper .one .pic3 {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  left: 63.96%;
+  top: 40.18%;
+  z-index: -1;
+  transform: rotate(320deg);
+  animation-name: pci-three;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.mySwiper .swiper-wrapper .two {
+  width: 100%;
+  background-color: #010001;
+  text-align: left;
+}
+@keyframes mymove {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.mySwiper .swiper-wrapper .two .message {
+  opacity: 0;
+  position: relative;
+  left: -110px;
+  z-index: 3;
+  width: 50%;
+}
+.mySwiper .swiper-wrapper .two .message .caption {
+  color: white;
+  font-size: 60px;
+  margin: 0;
+}
+.mySwiper .swiper-wrapper .two .message .rail {
+  width: 28px;
+  height: 3px;
+  background-color: #5E5E5E;
+  margin: 20px 0;
+}
+.mySwiper .swiper-wrapper .two .message .introduce {
+  color: white;
+  font-size: 36px;
+  margin: 0;
+}
+.mySwiper .swiper-wrapper .two .message .nature {
+  color: white;
+  font-size: 16px;
+  margin-top: 12px;
+  margin-bottom: 50px;
+}
+.mySwiper .swiper-wrapper .two .message .experience {
+  display: block;
+  width: 200px;
+  height: 48px;
+  background-image: url(img/按钮精灵图.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.mySwiper .swiper-wrapper .two video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.mySwiper .swiper-wrapper .two .footer {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  height: 82px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 22px;
+  padding-top: 38px;
+  overflow: hidden;
+  background-color: #131416;
+  color: #A4A4A4;
+}
+.mySwiper .swiper-wrapper .two .footer p {
+  margin: 0;
+}
+.mySwiper .swiper-wrapper .two .footer p a {
+  color: #A4A4A4;
+  text-decoration: none;
+}
+.mySwiper .swiper-wrapper .two .footer span {
+  margin-top: 2px;
+}
+.mySwiper .swiper-wrapper .two .footer .jh {
+  margin-top: 2px;
+  display: flex;
+  color: #A4A4A4;
+  text-decoration: none;
+  justify-content: center;
+}
+.mySwiper .swiper-wrapper .two .footer .jh img {
+  width: 20px;
+  height: 20px;
+}
+/*# sourceMappingURL=./360.css.map */
