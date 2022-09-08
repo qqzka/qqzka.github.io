@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.box {
+  display: flex;
+}
+.box .sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.408);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.box .sidebar .side-top {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 200px;
+  margin-top: 30px;
+  text-align: center;
+}
+.box .sidebar .side-top img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.box .sidebar .side-content .side-list li {
+  font-size: 20px;
+  margin-top: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.box .sidebar .side-content .side-list li:hover {
+  color: white;
+}
+.box .wrapper .jtym {
+  width: 100%;
+  text-align: center;
+  color: #2098D1;
+  padding: 25px 0;
+}
+.box .wrapper .jtym .container .row {
+  display: flex;
+  justify-content: space-around;
+}
+.box .wrapper .jtym .container .row .one {
+  width: 300px;
+  height: 230px;
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+}
+.box .wrapper .jtym .container .row .one a {
+  display: block;
+  width: 262.5px;
+  text-decoration: none;
+}
+.box .wrapper .jtym .container .row .one a img {
+  width: 262.5px;
+}
+.box .wrapper .jtym .container .row .one a p {
+  margin-top: 16px;
+  text-align: center;
+  color: black;
+  margin-bottom: 0;
+}
+.box .wrapper .js {
+  width: 100%;
+  text-align: center;
+  color: #2098D1;
+}
+.box .wrapper .jq {
+  width: 100%;
+  text-align: center;
+  color: #2098D1;
+}
+.box .wrapper .bootstrap {
+  width: 100%;
+  text-align: center;
+  color: #2098D1;
+}
+.box .wrapper .h5-css3 {
+  width: 100%;
+  text-align: center;
+  color: #2098D1;
+}
+/*# sourceMappingURL=./github.css.map */
