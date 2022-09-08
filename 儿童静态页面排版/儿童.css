@@ -1,0 +1,914 @@
+.kiddy {
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.kiddy .wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  height: 777px;
+  padding: 0 15px;
+  position: relative;
+  z-index: 0;
+}
+.kiddy .wrapper .header {
+  margin-bottom: 16px;
+  padding-top: 16px;
+}
+.kiddy .wrapper .header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.kiddy .wrapper .header .left {
+  width: 300px;
+  float: left;
+  padding: 10px 0;
+}
+.kiddy .wrapper .header .left a {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+}
+.kiddy .wrapper .header .left a span {
+  color: red;
+}
+.kiddy .wrapper .header .right {
+  width: 800px;
+  float: right;
+}
+.kiddy .wrapper .header .right::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.kiddy .wrapper .header .right ul.zuo {
+  float: left;
+  width: 308px;
+  padding: 20px;
+  margin-left: 180px;
+}
+.kiddy .wrapper .header .right ul.zuo li {
+  float: left;
+}
+.kiddy .wrapper .header .right ul.zuo li i {
+  font-size: 30px;
+  color: orange;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.kiddy .wrapper .header .right ul.zuo li p {
+  width: 218px;
+  height: 40px;
+  color: white;
+  font-size: 13px;
+}
+.kiddy .wrapper .header .right ul.you {
+  float: right;
+  width: 308px;
+  padding: 20px;
+}
+.kiddy .wrapper .header .right ul.you li {
+  float: left;
+}
+.kiddy .wrapper .header .right ul.you li i {
+  font-size: 30px;
+  color: red;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.kiddy .wrapper .header .right ul.you li p {
+  color: white;
+  font-size: 13px;
+  width: 218px;
+  height: 40px;
+}
+.kiddy .wrapper .nav {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+.kiddy .wrapper .nav::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.kiddy .wrapper .nav ul.list li {
+  float: left;
+  padding: 20px 0;
+  margin: 0 15px;
+}
+.kiddy .wrapper .nav ul.list li:first-child a {
+  color: red;
+}
+.kiddy .wrapper .nav ul.list li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+}
+.kiddy .wrapper .nav .icon {
+  float: right;
+}
+.kiddy .wrapper .nav .icon i.one {
+  color: #16c3b0;
+  padding: 20px;
+}
+.kiddy .wrapper .nav .icon i.two {
+  color: #71bc42;
+  padding: 20px;
+}
+.kiddy .wrapper .nav .icon i.three {
+  color: #fdb62f;
+  padding: 20px;
+}
+.kiddy .wrapper .container .content {
+  margin-top: 50px;
+  padding: 50px 15px 0 15px;
+  width: 445px;
+  height: 303px;
+}
+.kiddy .wrapper .container .content h3 {
+  font-family: "Indie Flower", cursive;
+  color: #fd4d40;
+  font-size: 22px;
+}
+.kiddy .wrapper .container .content h1 {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+.kiddy .wrapper .container .content p {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 80px;
+}
+.kiddy .wrapper .container .content .btn {
+  margin: 40px 0 16px 0;
+}
+.kiddy .wrapper .container .content .btn a {
+  color: white;
+  background-color: #dc3545;
+  padding: 24px 20px;
+  border-radius: 30px 0 30px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+.kiddy .wrapper .container .content .btn a:hover {
+  background-color: #c82333;
+}
+.kiddy .wrapper .container .content .imger {
+  float: right;
+  position: absolute;
+  top: 1px;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.kiddy .wrapper .container .content .imger img {
+  height: 777px;
+  width: 540px;
+}
+.indoor .wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+.indoor .wrapper::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.indoor .wrapper .card {
+  float: left;
+  width: 370px;
+  background-color: #fd4d40;
+  text-align: center;
+  margin: 0 15px;
+}
+.indoor .wrapper .card .icon i {
+  font-size: 35px;
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  line-height: 80px;
+  margin-top: -70px;
+  background-color: #fd4d40;
+}
+.indoor .wrapper .card .icon .title {
+  padding: 40px;
+}
+.indoor .wrapper .card .icon .title h2 {
+  font-size: 19px;
+  color: white;
+  margin-bottom: 8px;
+}
+.indoor .wrapper .card .icon .title p {
+  font-size: 15px;
+  margin-bottom: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.604);
+  line-height: 25px;
+}
+.indoor .wrapper .card1 {
+  float: left;
+  width: 370px;
+  background-color: #fdb62f;
+  text-align: center;
+  margin: 0 15px;
+}
+.indoor .wrapper .card1 .icon i {
+  font-size: 35px;
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  line-height: 80px;
+  background-color: #fdb62f;
+  margin-top: -70px;
+}
+.indoor .wrapper .card1 .icon .title {
+  padding: 40px;
+}
+.indoor .wrapper .card1 .icon .title h2 {
+  font-size: 19px;
+  color: white;
+  margin-bottom: 8px;
+}
+.indoor .wrapper .card1 .icon .title p {
+  font-size: 15px;
+  margin-bottom: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.604);
+  line-height: 25px;
+}
+.indoor .wrapper .card2 {
+  float: left;
+  width: 370px;
+  background-color: #16c3b0;
+  text-align: center;
+  margin: 0 15px;
+}
+.indoor .wrapper .card2 .icon i {
+  font-size: 35px;
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  line-height: 80px;
+  background-color: #16c3b0;
+  margin-top: -70px;
+}
+.indoor .wrapper .card2 .icon .title {
+  padding: 40px;
+}
+.indoor .wrapper .card2 .icon .title h2 {
+  font-size: 19px;
+  color: white;
+  margin-bottom: 8px;
+}
+.indoor .wrapper .card2 .icon .title p {
+  font-size: 15px;
+  margin-bottom: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.604);
+  line-height: 25px;
+}
+.about {
+  padding: 120px 0;
+  background-color: #f6f5f5;
+}
+.about::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.about .container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.about .container .picture {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+}
+.about .container .title {
+  float: left;
+  width: 40%;
+  margin-left: 100px;
+  padding: 0 15px 0 48px;
+}
+.about .container .title h4 {
+  font-family: "Indie Flower", cursive;
+  color: #fd4d40;
+  font-size: 19px;
+}
+.about .container .title h3 {
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+.about .container .title p {
+  font-size: 16px;
+  color: #364d59;
+  line-height: 27px;
+  margin-bottom: 16px;
+}
+.about .container .title .btn {
+  padding: 48px 0 16px 0;
+}
+.about .container .title .btn a {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  font-size: 13px;
+  background-color: #ffc107;
+  padding: 24px 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 30px 0 30px 0;
+  border: 1px solid transparent;
+}
+.about .container .title .btn a:hover {
+  background-color: #e0a800;
+}
+.packages {
+  background-color: #17a2b8;
+  padding: 120px 0;
+}
+.packages .container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.packages .container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.packages .container .header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.packages .container .header p {
+  font-family: "Indie Flower", cursive;
+  color: #fd4d40;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.packages .container .header h2 {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 8px;
+}
+.packages .container .content {
+  width: 1200px;
+  text-align: center;
+}
+.packages .container .content .cardone {
+  float: left;
+  width: 370px;
+  padding: 40px;
+  background-color: white;
+  margin: 0 15px;
+  border-radius: 10px;
+}
+.packages .container .content .cardone img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 30px;
+}
+.packages .container .content .cardone h3 {
+  color: #16c3b0;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.packages .container .content .cardone p {
+  color: #777;
+  line-height: 30px;
+  font-size: 15px;
+}
+.packages .container .content .cardone .btn {
+  margin-top: 44px;
+  margin-bottom: 16px;
+}
+.packages .container .content .cardone .btn a {
+  text-decoration: none;
+  font-size: 12px;
+  color: white;
+  border: 1px solid #dc3545;
+  background-color: #dc3545;
+  padding: 10px 20px;
+  border-radius: 30px 0 30px 0;
+  letter-spacing: 3px;
+  transition: all 0.3s;
+}
+.packages .container .content .cardone .btn a:hover {
+  background-color: #c82333;
+}
+.packages .container .content .cardtwo {
+  float: left;
+  width: 370px;
+  padding: 40px;
+  background-color: white;
+  margin: 0 15px;
+  border-radius: 10px;
+}
+.packages .container .content .cardtwo img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 30px;
+}
+.packages .container .content .cardtwo h3 {
+  color: #71bc42;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.packages .container .content .cardtwo p {
+  color: #777;
+  line-height: 30px;
+  font-size: 15px;
+}
+.packages .container .content .cardtwo .btn {
+  margin-top: 44px;
+  margin-bottom: 16px;
+}
+.packages .container .content .cardtwo .btn a {
+  text-decoration: none;
+  font-size: 12px;
+  color: black;
+  border: 1px solid #ffc107;
+  background-color: #ffc107;
+  padding: 10px 20px;
+  border-radius: 30px 0 30px 0;
+  letter-spacing: 3px;
+  transition: all 0.3s;
+}
+.packages .container .content .cardtwo .btn a:hover {
+  background-color: #e0a800;
+}
+.packages .container .content .cardthree {
+  float: left;
+  width: 370px;
+  padding: 40px;
+  background-color: white;
+  margin: 0 15px;
+  border-radius: 10px;
+}
+.packages .container .content .cardthree img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 30px;
+}
+.packages .container .content .cardthree h3 {
+  color: #16c3b0;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.packages .container .content .cardthree p {
+  color: #777;
+  line-height: 30px;
+  font-size: 15px;
+}
+.packages .container .content .cardthree .btn {
+  margin-top: 44px;
+  margin-bottom: 16px;
+}
+.packages .container .content .cardthree .btn a {
+  text-decoration: none;
+  font-size: 12px;
+  color: black;
+  border: 1px solid #71bc42;
+  background-color: #71bc42;
+  padding: 10px 20px;
+  border-radius: 30px 0 30px 0;
+  letter-spacing: 3px;
+  transition: all 0.3s;
+}
+.packages .container .content .cardthree .btn a:hover {
+  color: white;
+  background-color: #60a038;
+}
+.pricing {
+  padding: 120px 0;
+}
+.pricing .wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.pricing .wrapper .zuo {
+  width: 370px;
+  float: left;
+  padding: 0 15px;
+}
+.pricing .wrapper .zuo h4 {
+  font-family: "Indie Flower", cursive;
+  color: #fd4d40;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+.pricing .wrapper .zuo h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+.pricing .wrapper .zuo p {
+  color: #364d59ce;
+  line-height: 28px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.pricing .wrapper .zhong {
+  width: 370px;
+  float: left;
+  padding: 0 15px;
+}
+.pricing .wrapper .zhong .price {
+  width: 80px;
+  height: 80px;
+  background-color: #16c3b0;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 50px;
+  border: 3px solid white;
+  outline: 5px solid #16c3b0;
+  margin-bottom: 28px;
+}
+.pricing .wrapper .zhong .price span {
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.526);
+}
+.pricing .wrapper .zhong h3 {
+  font-weight: 400;
+  color: #364d59;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.pricing .wrapper .zhong p {
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.475);
+}
+.pricing .wrapper .zhong p i {
+  color: #16c3b0;
+  font-size: 19px;
+  padding-right: 20px;
+}
+.pricing .wrapper .zhong .btn {
+  background-color: #16c3b0;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 60px;
+  border-radius: 30px 0 30px 0;
+  margin-bottom: 16px;
+}
+.pricing .wrapper .zhong .btn a {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  font-size: 0.8rem;
+  border: 1px solid #16c3b0;
+  letter-spacing: 3px;
+}
+.pricing .wrapper .you {
+  width: 370px;
+  float: left;
+  padding: 0 15px;
+}
+.pricing .wrapper .you .price {
+  width: 80px;
+  height: 80px;
+  background-color: #fd4d40;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 50px;
+  border: 3px solid white;
+  outline: 5px solid #fd4d40;
+  margin-bottom: 30px;
+}
+.pricing .wrapper .you .price span {
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.526);
+}
+.pricing .wrapper .you h3 {
+  font-weight: 400;
+  color: #364d59;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.pricing .wrapper .you p {
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.475);
+}
+.pricing .wrapper .you p i {
+  color: #fd4d40;
+  font-size: 19px;
+  padding-right: 20px;
+}
+.pricing .wrapper .you .btn {
+  background-color: #fd4d40;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 60px;
+  border-radius: 30px 0 30px 0;
+  margin-bottom: 16px;
+}
+.pricing .wrapper .you .btn a {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  font-size: 0.8rem;
+  border: 1px solid #fd4d40;
+  letter-spacing: 3px;
+}
+.pricing .wrapper::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.client {
+  background-color: #f6f5f5;
+  padding: 120px 0;
+}
+.client .wrapper {
+  width: 730px;
+  margin: 0 auto;
+}
+.client .wrapper .header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.client .wrapper .header span {
+  font-family: "Indie Flower", cursive;
+  color: #fd4d40;
+  font-size: 20px;
+}
+.client .wrapper .header h2 {
+  font-size: 30px;
+  margin: 16px 0;
+}
+.client .wrapper .container {
+  background-color: #fd4d40;
+  width: 730px;
+}
+.client .wrapper .container .content {
+  padding: 30px;
+}
+.client .wrapper .container .content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.client .wrapper .container .content .picture {
+  float: left;
+  margin-right: 48px;
+}
+.client .wrapper .container .content .picture img {
+  width: 80px;
+  height: 80px;
+}
+.client .wrapper .container .content .info {
+  float: right;
+  width: 542px;
+}
+.client .wrapper .container .content .info h4 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.client .wrapper .container .content .info h5 {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+.client .wrapper .container .content .info p {
+  margin-bottom: 16px;
+  color: white;
+  font-size: 20px;
+  line-height: 32px;
+}
+.client .wrapper .list {
+  padding-top: 50px;
+  text-align: center;
+}
+.client .wrapper .list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.client .wrapper .list ul.one {
+  float: left;
+  width: 25%;
+}
+.client .wrapper .list ul.one li {
+  padding: 0 15px;
+}
+.client .wrapper .list ul.one li h3 {
+  margin-bottom: 8px;
+  color: #16c3b0;
+  font-size: 30px;
+}
+.client .wrapper .list ul.one li p {
+  color: #364d59;
+  font-size: 15px;
+}
+.client .wrapper .list ul.two {
+  float: left;
+  width: 25%;
+}
+.client .wrapper .list ul.two li {
+  padding: 0 15px;
+}
+.client .wrapper .list ul.two li h3 {
+  margin-bottom: 8px;
+  color: #fdb62f;
+  font-size: 30px;
+}
+.client .wrapper .list ul.two li p {
+  color: #364d59;
+  font-size: 15px;
+}
+.client .wrapper .list ul.three {
+  float: left;
+  width: 25%;
+}
+.client .wrapper .list ul.three li {
+  padding: 0 15px;
+}
+.client .wrapper .list ul.three li h3 {
+  margin-bottom: 8px;
+  color: #71bc42;
+  font-size: 30px;
+}
+.client .wrapper .list ul.three li p {
+  color: #364d59;
+  font-size: 15px;
+}
+.client .wrapper .list ul.four {
+  float: left;
+  width: 25%;
+}
+.client .wrapper .list ul.four li {
+  padding: 0 15px;
+}
+.client .wrapper .list ul.four li h3 {
+  margin-bottom: 8px;
+  color: #dc3545;
+  font-size: 30px;
+}
+.client .wrapper .list ul.four li p {
+  color: #364d59;
+  font-size: 15px;
+}
+.bring {
+  background-color: #ffc107;
+  width: 100%;
+  height: 100%;
+}
+.bring .wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.bring .wrapper .content {
+  height: 53px;
+}
+.bring .wrapper .content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.bring .wrapper .content h2 {
+  float: left;
+}
+.bring .wrapper .content h2 span {
+  color: white;
+  padding-bottom: 13px;
+  font-size: 30px;
+}
+.bring .wrapper .content p {
+  float: right;
+  padding: 16px 0;
+}
+.bring .wrapper .content p a {
+  text-decoration: none;
+  color: white;
+  background-color: #d73141;
+  font-size: 15px;
+  padding: 16px 48px;
+  vertical-align: bottom;
+  border-radius: 30px 0 30px 0;
+  letter-spacing: 2px;
+}
+.bring .wrapper .content p a:hover {
+  background-color: #c82333;
+}
+.kids {
+  background-color: #343a40;
+  padding: 120px 0;
+}
+.kids .container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.kids .container .row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.kids .container .row .diyi {
+  width: 35%;
+  float: left;
+  padding: 0 30px;
+}
+.kids .container .row .diyi h2 {
+  font-size: 18px;
+  color: #fd4d40;
+  margin-bottom: 16px;
+}
+.kids .container .row .diyi p {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 48px;
+  line-height: 25px;
+}
+.kids .container .row .diyi h3 {
+  font-size: 18px;
+  color: #fd4d40;
+  margin-bottom: 24px;
+}
+.kids .container .row .diyi .biaodan .biaodan1 {
+  width: 245px;
+  height: 50px;
+  padding: 20px 8px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.kids .container .row .diyi .biaodan .biaodan2 {
+  padding: 20px 10px;
+  font-size: 12px;
+  width: 90px;
+  height: 50px;
+  background-color: #dc3545;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  color: white;
+  letter-spacing: 2px;
+  vertical-align: bottom;
+}
+.kids .container .row .dier {
+  width: 60%;
+  float: left;
+}
+.kids .container .row .dier::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.kids .container .row .dier ul.one {
+  float: left;
+  width: 30%;
+  margin-left: 260px;
+}
+.kids .container .row .dier ul.one li {
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 30px;
+  font-size: 14px;
+}
+.kids .container .row .dier ul.one li h2 {
+  font-size: 18px;
+  color: #fd4d40;
+  margin-bottom: 24px;
+}
+.kids .container .row .dier ul.two {
+  float: right;
+  width: 30%;
+}
+.kids .container .row .dier ul.two li {
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 30px;
+  font-size: 14px;
+}
+.kids .container .row .dier ul.two li h2 {
+  font-size: 18px;
+  color: #fd4d40;
+  margin-bottom: 24px;
+}
+.kids .container .banquan {
+  text-align: center;
+  padding-top: 100px;
+}
+.kids .container .banquan h2 {
+  color: white;
+  padding: 48px;
+}
+.kids .container .banquan h2 i {
+  color: red;
+}
+.kids .container .banquan .xhx {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+/*# sourceMappingURL=./儿童.css.map */

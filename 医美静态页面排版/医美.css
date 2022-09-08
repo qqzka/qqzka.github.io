@@ -1,0 +1,539 @@
+.aesthetic {
+  background-color: cadetblue;
+  padding: 10px 0;
+}
+.aesthetic .wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+.aesthetic .wrapper .header {
+  overflow: hidden;
+}
+.aesthetic .wrapper .header ul {
+  float: left;
+  width: 750px;
+  overflow: hidden;
+}
+.aesthetic .wrapper .header ul li {
+  float: left;
+  margin-right: 20px;
+  font-size: 10px;
+  color: white;
+}
+.aesthetic .wrapper .header div.rigth-icon {
+  float: right;
+  width: 250px;
+  letter-spacing: 10px;
+  color: white;
+  font-size: 10px;
+  text-align: right;
+}
+.header .sub-header {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+.header .sub-header .title {
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.header .sub-header .sub-title {
+  float: left;
+  width: 500spx;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+.header .sub-header .sub-title span {
+  font-size: 10px;
+  padding-right: 8px;
+  font-weight: bold;
+  padding: 0 15px;
+}
+.header .sub-header .sub-title span:hover {
+  text-decoration: underline;
+  color: aqua;
+}
+.header .sub-header .btn {
+  float: right;
+  padding: 12px 30px;
+  border: 1px solid paleturquoise;
+  background-color: transparent;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.cont {
+  background-image: url(imgas/hero-bg.jpg);
+  height: 500px;
+  padding: 150px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+.cont .container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.cont .container .title {
+  width: 500px;
+}
+.cont .container .title p {
+  font-size: 5px;
+  color: #13a2b7;
+  font-weight: bold;
+}
+.cont .container .title h2 {
+  font-size: 40px;
+  margin: 5px 0 20px 0;
+  font-weight: bold;
+}
+.cont .container .title button {
+  padding: 12px 30px;
+  border: 1px solid paleturquoise;
+  background-color: #13a2b7;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.offer {
+  margin: 50px 0;
+}
+.offer .cent {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 0 15px;
+}
+.offer .cent .header {
+  text-align: center;
+  margin: 0 0 45px 0;
+}
+.offer .cent .header p {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #888888;
+}
+.offer .cent .header h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 8px 0 0 0;
+}
+.offer .cent .box {
+  overflow: hidden;
+}
+.offer .cent .box .card {
+  width: 292px;
+  margin: 0 0 30px 0;
+  float: left;
+  text-align: center;
+  padding: 0 15px;
+}
+.offer .cent .box .card h3 {
+  margin: 16px 0 16px 0;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.offer .cent .box .card p {
+  color: #666666;
+}
+.center {
+  margin: 100px 0;
+  padding: 20px auto;
+  background-image: url(imgas/services-bg.jpg);
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+.center .wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+.center .wrapper .header {
+  overflow: hidden;
+  padding: 50px 0;
+}
+.center .wrapper .header .title {
+  float: left;
+}
+.center .wrapper .header .title p {
+  font-size: 12px;
+  color: #13a2b7;
+}
+.center .wrapper .header .title h3 {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+.center .wrapper .header .btn {
+  float: right;
+  border: 2px solid #13a2b7;
+  border-radius: 2px;
+  background-color: transparent;
+  padding: 12px 30px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.center .wrapper .container {
+  overflow: hidden;
+  width: 1000px;
+}
+.center .wrapper .container .card {
+  width: 460px;
+  float: left;
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.center .wrapper .container .card .icon {
+  width: 100px;
+  margin-right: 30px;
+  float: left;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.center .wrapper .container .card .icon i {
+  font-size: 50px;
+  color: #13a2b7;
+}
+.center .wrapper .container .card:hover {
+  background-color: #13a2b7;
+  text-decoration: none;
+  color: white;
+}
+.center .wrapper .container .card:hover .icon i {
+  color: white;
+}
+.center .wrapper .container .card:hover .sub-title p {
+  color: white;
+}
+.center .wrapper .container .card .sub-title {
+  float: left;
+  width: 250px;
+}
+.center .wrapper .container .card .sub-title h3 {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.center .wrapper .container .card .sub-title p {
+  color: #666666;
+}
+.big-box .two-box {
+  width: 1000px;
+  margin: 0 auto;
+}
+.big-box .two-box .box1 {
+  text-align: center;
+  margin: 40px 0;
+}
+.big-box .two-box .box1 p {
+  color: #888888;
+  font-size: 10px;
+}
+.big-box .two-box .box1 h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.big-box .two-box .box2 {
+  width: 1000px;
+  overflow: hidden;
+}
+.big-box .two-box .box2 .container {
+  width: 280px;
+  padding: 15px;
+  margin-right: 50px;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+}
+.big-box .two-box .box2 .container:hover img {
+  text-decoration: none;
+  border-color: #13a2b7;
+}
+.big-box .two-box .box2 .container img {
+  border-radius: 50%;
+  border: 10px solid white;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+.big-box .two-box .box2 .container h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.big-box .two-box .box2 .container p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #13a2b7;
+}
+.big-box .two-box .box2 .container .icon i {
+  margin: 10px;
+  color: #666666;
+  font-size: 10px;
+}
+.picture {
+  height: 600px;
+  overflow: hidden;
+  margin: 100px 0;
+}
+.picture ul {
+  width: 75%;
+  float: left;
+  overflow: hidden;
+}
+.picture ul li {
+  background-color: #13a2b7;
+  height: 300px;
+  width: calc(33.33% - 15px);
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  background-size: cover;
+  background-position: center top;
+}
+.picture ul li:nth-child(1) {
+  background-image: url(imgas/01.jpg);
+}
+.picture ul li:nth-child(2) {
+  background-image: url(imgas/02.jpg);
+}
+.picture ul li:nth-child(3) {
+  background-image: url(imgas/3.jpg);
+}
+.picture ul li:nth-child(4) {
+  background-image: url(imgas/5.jpg);
+}
+.picture ul li:nth-child(5) {
+  background-image: url(imgas/6.jpg);
+}
+.picture ul li:nth-child(6) {
+  background-image: url(imgas/7.jpg);
+}
+.picture .box {
+  width: 25%;
+  height: 600px;
+  background-color: blue;
+  float: left;
+  background-image: url(imgas/4.jpg);
+  background-size: cover;
+  background-position: center top;
+}
+.box1 {
+  margin: 100px 0;
+}
+.box1 .container {
+  margin: 0 auto;
+  width: 1000px;
+  padding: 0 15px;
+}
+.box1 .container .header {
+  overflow: hidden;
+  height: 80px;
+}
+.box1 .container .header .title {
+  float: left;
+  margin-bottom: 35px;
+}
+.box1 .container .header .title p {
+  font-size: 10px;
+  color: #888888;
+}
+.box1 .container .header .title h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+.box1 .container .header .btn {
+  float: right;
+  border: 2px solid #13a2b7;
+  background-color: transparent;
+  padding: 10px 30px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+.box1 .inof {
+  overflow: hidden;
+  width: 1000px;
+}
+.box1 .inof .content {
+  width: 323px;
+  float: left;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.box1 .inof .content .card {
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-right: 20px;
+}
+.box1 .inof .content .card:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+.box1 .inof .content .card:hover a {
+  text-decoration: underline;
+}
+.box1 .inof .content .card a {
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+.box1 .inof .content .card p {
+  font-size: 5px;
+  color: #666666;
+  margin: 15px 0 15px 0;
+}
+.box1 .inof .content .card .user {
+  margin-bottom: 10px;
+}
+.box1 .inof .content .card .user img {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.box1 .inof .content .card .user span {
+  color: #666666;
+  font-size: 5px;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+.footer {
+  background-color: black;
+  margin: 50px 0;
+}
+.footer .bodr .container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.footer .bodr .container .header {
+  overflow: hidden;
+  padding: 40px 0;
+  border-bottom: 1px solid white;
+  margin-bottom: 60px;
+}
+.footer .bodr .container .header .logo {
+  float: left;
+  width: 330px;
+  padding: 15px;
+}
+.footer .bodr .container .header .logo a img {
+  padding: 10px 0;
+}
+.footer .bodr .container .header .btn {
+  float: left;
+  width: 390px;
+  padding: 15px;
+}
+.footer .bodr .container .header .btn form {
+  width: 300px;
+  overflow: hidden;
+  color: white;
+}
+.footer .bodr .container .header .btn form input {
+  border-radius: 50px 0  0 50px;
+  padding: 10px;
+  width: 200px;
+  float: left;
+  background-color: transparent;
+  border: 2px solid #13a2b7;
+}
+.footer .bodr .container .header .btn form .sub-btn {
+  border-radius: 0 50px 50px 0;
+  padding: 10px;
+  width: 100px;
+  float: right;
+  background-color: #13a2b7;
+  color: white;
+  border: 2px solid transparent;
+}
+.footer .bodr .container .header .icon {
+  float: left;
+  width: 280px;
+  text-align: right;
+  padding: 10px;
+}
+.footer .bodr .container .header .icon i {
+  color: white;
+  margin-right: 8px;
+  font-size: 15px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer .bodr .container .centent {
+  overflow: hidden;
+}
+.footer .bodr .container .centent .title {
+  float: left;
+  width: 20%;
+  padding-right: 15px;
+  margin-bottom: 30px;
+}
+.footer .bodr .container .centent .title h3 {
+  padding-bottom: 15px;
+  color: white;
+  font-weight: bold;
+}
+.footer .bodr .container .centent .title ul {
+  color: #c4c4c4;
+}
+.footer .bodr .container .centent .title ul li {
+  margin-bottom: 5px;
+  font-size: 5px;
+}
+.footer .bodr .container .centent .icon-title {
+  width: 30%;
+  float: left;
+}
+.footer .bodr .container .centent .icon-title h3 {
+  color: white;
+  padding-bottom: 15px;
+}
+.footer .bodr .container .centent .icon-title ul li {
+  color: #c4c4c4;
+  font-size: 5px;
+  margin-bottom: 20px;
+}
+.footer .bodr .container .centent .icon-title ul li i {
+  color: #13a2b7;
+  font-size: 15px;
+}
+.footer .bodr .container .centent .card {
+  width: 30%;
+  float: left;
+  background-color: white;
+  height: 140px;
+}
+.footer .bodr .container .base {
+  overflow: hidden;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+.footer .bodr .container .base .left-title {
+  color: #c4c4c4;
+  font-size: 5px;
+  width: 700px;
+  float: left;
+}
+.footer .bodr .container .base .right-title {
+  color: #c4c4c4;
+  font-size: 5px;
+  width: 300px;
+  float: left;
+}
+/*# sourceMappingURL=./作业.css.map */
