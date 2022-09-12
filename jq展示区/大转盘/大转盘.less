@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.zp {
+
+    width: 560px;
+    height: 560px;
+    background-image: url("./imgs/bg_lottery.png");
+    position: relative;
+
+    .bj {
+        width: 510px;
+        height: 510px;
+        background-image: url("./imgs/bg_lottery_f.png");
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        transition: all 5s ease-in-out;
+
+        .item {
+            width: 510px;
+            height: 510px;
+            position: absolute;
+            .content {
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                top: 0;
+                left: calc(50% - 60px);
+                text-align: center;
+
+                span {
+                    margin-top: 5px;
+                    font-size: 20px;
+                    display: block;
+                    text-align: center;
+                    color: white;
+                }
+
+                p {
+                    color: white;
+                }
+
+                img {}
+            }
+
+            &:nth-child(1) {
+                transform: rotate(22.5deg);
+            }
+            
+            &:nth-child(2) {
+                transform: rotate(67.5deg);
+            }
+            
+            &:nth-child(3) {
+                transform: rotate(112.5deg);
+            }
+            
+            &:nth-child(4) {
+                transform: rotate(157.5deg);
+            }
+            
+            &:nth-child(5) {
+                transform: rotate(202.5deg);
+            }
+            
+            &:nth-child(6) {
+                transform: rotate(247.5deg);
+            }
+            
+            &:nth-child(7) {
+                transform: rotate(292.5deg);
+            }
+            
+            &:nth-child(8) {
+                transform: rotate(337.5deg);
+            }
+        }
+
+    }
+
+    .btn {
+        width: 160px;
+        height: 160px;
+        background-image: url("./imgs/btn_lottery.png");
+        position: absolute;
+        top: calc(50% - 80px);
+        left: calc(50% - 80px);
+
+        &::before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-image: url(./imgs/icon_point.png);
+            position: absolute;
+            top: -32px;
+            left: 60px;
+        }
+    }
+}

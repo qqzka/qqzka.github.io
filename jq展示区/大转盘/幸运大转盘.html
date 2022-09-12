@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./大转盘.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="zp">
+        <div class="bj">
+        </div>
+        <div class="btn">
+        </div>
+    </div>
+
+
+    <script>
+        var arr = [
+            {
+                title: "谢谢惠顾",
+                img: "./imgs/lottery_05.png",
+                g: 0.4
+            },
+            {
+                title: "京东卡10元",
+                img: "./imgs/lottery_01.png",
+                g: 0.3
+            },
+            {
+                title: "京东卡20元",
+                img: "./imgs/lottery_02.png",
+                g: 0.1
+            },
+            {
+                title: "京东卡50元",
+                img: "./imgs/lottery_03.png",
+                g: 0.08
+            },
+            {
+                title: "京东卡100元",
+                img: "./imgs/lottery_04.png",
+                g: 0.05
+            },
+
+            {
+                title: "京东卡200元",
+                img: "./imgs/lottery_06.png",
+                g: 0.04
+            },
+            {
+                title: "京东卡500元",
+                img: "./imgs/lottery_07.png",
+                g: 0.02
+            },
+            {
+                title: "iQOO Pro手机",
+                img: "./imgs/lottery_08.png",
+                g: 0.01
+            },
+
+        ];
+        arr.forEach(function (item, index) {
+            $(".zp .bj").append(`
+            <div class="item">
+                <div class="content">
+                    <span>${item.title}</span>
+                    <img src="${item.img}" alt="">
+                </div>
+            </div>
+            `);
+        });
+        var luckyNum;
+
+        $(".bj").on("transitionend", function () {
+            if (luckyNum) {
+                alert("恭喜您抽中了:" + arr[luckyNum].title);
+            }
+            luckNum = null;
+        });
+
+        $(".btn").click(function () {
+            $(".bj").css({
+                transform: `rotate(0deg)`,
+                transition: "none",
+            });
+            setTimeout(() => {
+                // 随机数0-1
+                var randomNum = Math.random();
+                //当前
+                var current = 0;
+                // 中奖的第几个
+                luckyNum = 0;
+                console.log(randomNum);
+                for (let i = 0; i < arr.length; i++) {
+                    current += arr[i].g;
+                    if (randomNum < current) {
+                        luckyNum = i;
+                        break;
+                    }
+                }
+                //转圈
+                var rotateDeg = (5 * 360) + (-(luckyNum * 45) + 22.5);
+
+                $(".bj").css({
+                    transition: "all 5s ease-in-out",
+                    transform: `rotate(${rotateDeg}deg)`
+                });
+            }, 0);
+
+        })
+    </script>
+</body>
+
+</html>

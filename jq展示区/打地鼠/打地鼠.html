@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 20px 30px;
+            background-color: red;
+            border-radius: 10px;
+        }
+
+        .box {
+            margin-left: calc(50% - 300px);
+            width: 600px;
+            height: 560px;
+            background-image: url(./imgs/ddsbj.jpg);
+            background-repeat: no-repeat;
+            position: relative;
+            cursor: url("./imgs/chuizi.png"),pointer;
+        }
+
+
+        .box .mask {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.052);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 999;
+
+        }
+
+        .box .mask-over {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.052);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+        }
+
+        .box .imgbox {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-around;
+            width: 600px;
+            height: 400px;
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            z-index: 1;
+        }
+
+        .box .imgbox img {
+            width: 120px;
+            height: 120px;
+            margin: 0 20px;
+            position: relative;
+            top: -15px;
+            left: 9px;
+            visibility: hidden;
+        }
+
+        .box .imgbox .active {
+            visibility: visible;
+        }
+
+        .box .score {
+            position: absolute;
+            top: 95px;
+            left: 0;
+            background-color: yellow;
+            padding: 5px 30px;
+            border-radius: 50px;
+            font-size: 15px;
+
+        }
+
+        .box .time {
+            position: absolute;
+            top: 95px;
+            right: 0;
+            background-color: yellow;
+            padding: 5px 30px;
+            border-radius: 50px;
+            font-size: 15px;
+            /* visibility:visible; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="mask">
+            <a href="#" class="begin">点击开始游戏</a>
+        </div>
+        <div class="mask-over">
+            <a href="#" class="over">重新开始游戏</a>
+        </div>
+        <div class="imgbox">
+        </div>
+
+        <div class=" time">剩余时间:0秒! !
+        </div>
+        <div class="score">当前得分为: 0分</div>
+    </div>
+    <script>
+        //得分
+        var score = 0;
+        //时间
+        var time = 20;
+        //随机图片
+        var a = Math.floor(Math.random() * 9);
+        //生成图片
+        for (let i = 0; i < 9; i++) {
+            $(".imgbox").append(`<img src=./imgs/mouse.png >`);
+        }
+        //随机图片显示，随机数不一样
+        function show() {
+            var tmp = Math.floor(Math.random() * 9);
+            // 不重随机数
+            if (a === tmp) {
+                show();
+            } else {
+                a = tmp;
+            }
+
+            $("img").eq(a).attr("src", "./imgs/mouse.png").addClass("active").siblings().removeClass("active");
+        }
+
+        function xxx() {
+            if (time === -1) {
+                $("img").removeClass("active");
+                $(".mask-over").css({
+                    "visibility": "visible",
+                    "z-index": 999,
+                });
+                clearInterval(id);
+            } else {
+                $(".time").text(`剩余时间:${time}秒`);
+                show();
+            }
+            time--;
+        }
+
+        var id;
+        //开始遮罩层消失
+        $(".mask").click(function () {
+            $(".mask").css("display", "none");
+            //点击切换图片并消失
+            $("img").click(function () {
+                score++;
+                $(".score").text("当前得分为:" + score + "分");
+                $(this).attr("src", "./imgs/mouse2.png");
+                setTimeout(() => {
+                    $(this).removeClass("active");
+                }, 500);
+            });
+            // 计时器随机显示图片位置 更新时间
+            id = setInterval(() => {
+                xxx();
+            }, 1000);
+        });
+
+        //结束遮罩层消失，重置数据
+        $(".over").click(function () {
+            $(".mask-over").css({ "visibility": "hidden", });
+            score = 0;
+            time = 20;
+            $(".score").text("当前得分为:" + score + "分");
+            $("img").click(function () {
+                $(".score").text("当前得分为:" + score + "分");
+                $(this).attr("src", "./imgs/mouse2.png");
+                setTimeout(() => {
+                    $(this).removeClass("active");
+                }, 500);
+            });
+            // 计时器随机显示图片位置 更新时间
+            id = setInterval(() => {
+                xxx();
+            }, 1000);
+        });
+
+    </script>
+</body>
+
+</html>
