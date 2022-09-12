@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  
+  <div class="content">
+    <div class="stage">
+      <div class="tail">
+        <i class="b"></i>
+        <i class="s"></i>
+      </div>
+      <div class="needle">
+        <div class="central"></div>
+        <div class="hh"></div>
+        <div class="mm"></div>
+        <div class="ss"></div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .content{
+      /* background-color: black; */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .stage {
+      width: 500px;
+      height: 500px;
+      background-color: lightblue;
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    .stage .tail {
+      position: relative;
+      
+    }
+
+    .stage .tail i {
+      display: block;
+      transform-origin: center 250px;
+    }
+
+    .stage .tail i.b {
+      background-color: aquamarine;
+      width: 8px;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -4px;
+    }
+
+    .stage .tail i.s {
+      width: 4px;
+      height: 20px;
+      background-color: black;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -2px;
+
+    }
+
+    .stage .needle {
+      width: 500px;
+      height: 500px;
+      position: relative;
+    } 
+    .stage .needle .central{
+      background-color: black;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -15px;
+      margin-top: -15px;
+      z-index: 9;
+      
+    }
+    .stage .needle .hh{
+      width: 10px;
+      height: 100px;
+      background-color: cadetblue;
+      position: absolute;
+      top: 150px ;
+      left: 50%;
+      margin-left: -5px;
+      transform-origin: center 100px;
+      border-radius: 10px;
+    }
+    .stage .needle .mm{
+      width: 8px;
+      height: 120px;
+      background-color:green;
+      position: absolute;
+      top: 130px;
+      left: 50%;
+      margin-left:-4px;
+      /* x轴居中  y轴最低点 */
+      transform-origin: center  120px;  
+      /* 旋转45° */
+      /* transform: rotate(45deg); */
+      border-radius: 10px;
+    }
+    .stage .needle .ss{
+      width: 6px;
+      height: 160px;
+      background-color: black;
+      position: absolute;
+      top: 90px;
+      left: 50%;
+      margin-left:-3px ;
+      /* x轴居中  y轴最低点 */
+      transform-origin: center  160px;  
+      /* 旋转45° */
+      /* transform: rotate(45deg); */
+      border-radius: 10px;
+    }
+  </style>
+
+  <script>
+    for (var i = 0; i < 12 * 5; i++) {
+      var node = document.createElement("i")   //创建元素节点
+      // console.log(node);
+      if (i % 5 === 0) {
+        node.className = "b";
+      } else {
+        node.className = "s";
+      }
+      node.style.transform = "rotate(" + i * (360 / (12 * 5)) + "deg)";
+      document.querySelector(".tail").appendChild(node)
+    }
+    function hoursEl(h,f) {
+      if (h > 12) {
+        h=h-12
+      }
+
+      return h*30 + parseInt((f/12)*6) + (f%12/2)
+    }
+    setInterval(function () {
+      var now = new Date();
+      var ssEl =document.querySelector(".ss")
+      var mmEl =document.querySelector(".mm")
+      var hhEl =document.querySelector(".hh")
+      var hours = hoursEl(now.getHours(),now.getMinutes()) ;
+    
+      ssEl.style.transform="rotate("+ now.getSeconds()*6  + "deg)"
+      mmEl.style.transform="rotate("+ now.getMinutes()*6  + "deg)"
+      hhEl.style.transform="rotate("+ hours + "deg)"
+
+    }, 1000);
+
+  </script>
+</body>
+
+</html>

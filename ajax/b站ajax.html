@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="referrer" content="never">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.css">
+    <link rel="stylesheet" href="./ajax.css">
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul class="styleId"></ul>
+        <ul class="areaId"></ul>
+        <ul class="isFinish"></ul>
+        <ul class="isFree"></ul>
+        <ul class="order"></ul>
+        <ul class="comics"></ul>
+    </div>
+    <script>
+        var query = {
+            styleId: -1,
+            areaId: -1,
+            isFinish: -1,
+            isFree: -1,
+            order: 0,
+        };
+        // 第一个首页
+        function getAndRender() {
+            $.get("https://apis.netstart.cn/bcomic/ClassPage", query, function (res) {
+                console.log(res);
+                $(".comics").html("");
+                res.data.forEach(function (comit) {
+                    $(".comics").append(`<li>
+                        <img src = ${ comit.vertical_cover}> 
+                        <p> ${ comit.title }</p> 
+                        <span>更新至${ comit.total}话</span>
+                        </li>`
+
+                    );
+                });
+            });
+        }
+        getAndRender();
+        //题材
+        var styleIds = [
+            { text: "全部", id: -1 },
+            { text: "热血", id: 999 },
+            { text: "古风", id: 997 },
+            { text: "玄幻", id: 1016 },
+            { text: "奇幻", id: 998 },
+            { text: "悬疑", id: 1023 },
+            { text: "都市", id: 1002 },
+            { text: "历史", id: 1096 },
+            { text: "武侠仙侠", id: 1092 },
+            { text: "游戏竞技", id: 1088 },
+            { text: "悬疑灵异", id: 1081 },
+            { text: "架空", id: 1063 },
+            { text: "青春", id: 1060 },
+            { text: "现代", id: 1048 },
+            { text: "正能量", id: 1028 },
+            { text: "科幻", id: 1015 },
+        ];
+
+        // styleId 题材分类id   number -1全部  999热血   997古风  1016玄幻 998奇幻 1023悬疑 1002都市 1096历史 1092武侠仙侠  1088游戏竞技  1081悬疑灵异 1063架空 1060青春  1048现代 1028正能量 1015科幻
+        //地区
+        var areaId = [
+            { text: "全部", id: -1 },
+            { text: "大陆", id: 1 },
+            { text: "日本", id: 2 },
+            { text: "韩国", id: 6 },
+            { text: "其他", id: 5 },
+        ];
+        //areaId 地区分类id    number -1全部  1大陆  2日本  6韩国  5其他
+        //进度
+        var isFinish = [
+            { text: "全部", id: -1 },
+            { text: "连载", id: 0 },
+            { text: "完结", id: 1 },
+        ];
+        // isFinish 进度分类     number -1全部  0连载  1完结
+        //收费
+        var isFree = [
+            { text: "全部", id: -1 },
+            { text: "免费", id: 1 },
+            { text: "付费", id: 2 },
+            { text: "等就免费", id: 3 },
+        ];
+        // isFree 收费id        number -1全部  1免费  2付费   3等就免费
+        //排序
+        var order = [
+            { text: "人气推荐", id: 0 },
+            { text: "更新时间", id: 1 },
+            { text: "追漫人数", id: 2 },
+            { text: "上架时间", id: 3 },
+        ];
+        //order  排序   number 0人气推荐 1更新时间 2追漫人数  3上架时间
+
+        styleIds.forEach(obj => {
+            $(".styleId").append(`<li class=${obj.id == query.styleId ? "active" : "x"} data-id=${obj.id}>${obj.text}</li>`);
+        });
+
+        areaId.forEach(obj => {
+            $(".areaId").append(`<li class=${obj.id == query.areaId ? "active" : "x"} data-id=${obj.id}>${obj.text}</li>`);
+        });
+
+        isFinish.forEach(obj => {
+            $(".isFinish").append(`<li class=${obj.id == query.isFinish ? "active" : "x"} data-id=${obj.id}>${obj.text}</li>`);
+        });
+        isFree.forEach(obj => {
+            $(".isFree").append(`<li class=${obj.id == query.isFree ? "active" : "x"} data-id=${obj.id}>${obj.text}</li>`);
+        });
+        order.forEach(obj => {
+            console.log(obj);
+            $(".order").append(`<li class=${obj.id == query.order ? "active" : "x"} data-id=${obj.id}>${obj.text}</li>`);
+        });
+
+        $(".styleId li").click(function () {
+            // console.log($(this).data("id"));
+            $(this).addClass("active").siblings().removeClass("active");
+            query.styleId = $(this).data("id");
+            getAndRender();
+        });
+
+        $(".areaId li").click(function () {
+            // console.log($(this).data("id"));
+            $(this).addClass("active").siblings().removeClass("active");
+            query.areaId = $(this).data("id");
+            getAndRender();
+        });
+        $(".isFinish li").click(function () {
+            // console.log($(this).data("id"));
+            $(this).addClass("active").siblings().removeClass("active");
+            query.isFinish = $(this).data("id");
+            getAndRender();
+        });
+        $(".isFree li").click(function () {
+            // console.log($(this).data("id"));
+            $(this).addClass("active").siblings().removeClass("active");
+            query.isFree = $(this).data("id");
+            getAndRender();
+        });
+        $(".order li").click(function () {
+            // console.log($(this).data("id"));
+            $(this).addClass("active").siblings().removeClass("active");
+            query.order = $(this).data("id");
+            getAndRender();
+        });
+
+    </script>
+</body>
+
+</html>

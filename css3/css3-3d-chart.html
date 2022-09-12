@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css3-3d-chart.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box ">
+        <h2>STEPS</h2>
+        <h5>THIS WEEK</h5>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <p>93,000</p>
+    </div>
+    <script>
+        var arr = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
+        var boxEl = document.querySelector(".box")
+        boxEl.onclick = function () {
+            this.classList.toggle("active")
+            var list = document.querySelectorAll("li")
+            if (this.classList.contains("active")) {
+                arr.forEach(function (e , i) {
+                    list[i].innerText = e
+                });
+            }else{
+                arr.forEach(function (e , i) {
+                    list[i].innerText = '';
+                });
+            }
+        }
+
+    </script>
+</body>
+
+</html>

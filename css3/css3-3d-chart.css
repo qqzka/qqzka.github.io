@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+}
+.box {
+  width: 300px;
+  height: 400px;
+  background-image: url(600x600.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  transform-origin: center center 100px;
+  justify-content: center;
+  align-items: center;
+}
+.box h2,
+.box h5,
+.box p,
+.box ul,
+.box li {
+  margin: 0;
+  padding: 0;
+  transition: inherit;
+}
+.box::after,
+.box::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  transition: inherit;
+}
+.box::before {
+  background-color: rgba(255, 0, 0, 0.185);
+  z-index: 1;
+}
+.box::after {
+  background-color: rgba(0, 0, 0, 0.762);
+  z-index: -1;
+  transform: translateZ(-30px);
+}
+.box.active {
+  transform: rotatex(60deg);
+}
+.box.active::before {
+  background-color: #2e39566c;
+}
+.box.active::after {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.601);
+}
+.box.active h2,
+.box.active h5,
+.box.active p {
+  transform: translateZ(30px);
+}
+.box.active ul {
+  text-align: center;
+}
+.box.active ul li:nth-child(1) {
+  transform: rotate(-45deg) translateZ(200px);
+}
+.box.active ul li:nth-child(1)::before,
+.box.active ul li:nth-child(1)::after {
+  width: 200px;
+}
+.box.active ul li:nth-child(1)::after {
+  content: '20,000';
+  transform: rotateY(270deg) rotateX(0deg) translateX(-200px);
+}
+.box.active ul li:nth-child(2) {
+  transform: rotate(-45deg) translateZ(100px);
+}
+.box.active ul li:nth-child(2)::before,
+.box.active ul li:nth-child(2)::after {
+  width: 100px;
+}
+.box.active ul li:nth-child(2)::after {
+  content: '10,000';
+  transform: rotateY(270deg) rotateX(0deg) translateX(-100px);
+}
+.box.active ul li:nth-child(3) {
+  transform: rotate(-45deg) translateZ(150px);
+}
+.box.active ul li:nth-child(3)::before,
+.box.active ul li:nth-child(3)::after {
+  width: 150px;
+}
+.box.active ul li:nth-child(3)::after {
+  content: '15,000';
+  transform: rotateY(270deg) rotateX(0deg) translateX(-150px);
+}
+.box.active ul li:nth-child(4) {
+  transform: rotate(-45deg) translateZ(240px);
+}
+.box.active ul li:nth-child(4)::before,
+.box.active ul li:nth-child(4)::after {
+  width: 240px;
+}
+.box.active ul li:nth-child(4)::after {
+  content: '24,000';
+  transform: rotateY(270deg) rotateX(0deg) translateX(-240px);
+}
+.box.active ul li:nth-child(5) {
+  transform: rotate(-45deg) translateZ(70px);
+}
+.box.active ul li:nth-child(5)::before,
+.box.active ul li:nth-child(5)::after {
+  width: 70px;
+}
+.box.active ul li:nth-child(5)::after {
+  content: '7,000';
+  transform: rotateY(270deg) rotateX(0deg) translateX(-70px);
+}
+.box.active ul li:nth-child(6) {
+  transform: rotate(-45deg) translateZ(70px);
+}
+.box.active ul li:nth-child(6)::before,
+.box.active ul li:nth-child(6)::after {
+  width: 70px;
+}
+.box.active ul li:nth-child(6)::after {
+  content: '7,000';
+  transform: rotateY(270deg) rotateX(0deg) translateX(-70px);
+}
+.box.active ul li:nth-child(7) {
+  transform: rotate(-45deg) translateZ(100px);
+}
+.box.active ul li:nth-child(7)::before,
+.box.active ul li:nth-child(7)::after {
+  width: 100px;
+}
+.box.active ul li:nth-child(7)::after {
+  content: '10,000';
+  transform: rotateY(270deg) rotateX(0deg) translateX(-100px);
+}
+.box ul {
+  width: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+  transition: inherit;
+  z-index: 9;
+}
+.box ul li {
+  width: 20px;
+  height: 20px;
+  list-style: none;
+  background-color: white;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotate(-45deg) translateZ(0px);
+  margin: 0 10px;
+  transition: inherit;
+}
+.box ul li::after,
+.box ul li::before {
+  width: 240px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.box ul li::after {
+  content: '';
+  text-align: end;
+  transform-origin: left center;
+  transform: rotateY(270deg) rotateX(0deg) translateX(-240px);
+}
+.box ul li::before {
+  content: '';
+  transform-origin: left bottom;
+  transform: rotateY(90deg) rotateX(270deg);
+}
+/*# sourceMappingURL=./css3-3d-chart.css.map */

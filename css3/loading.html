@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        h1,
+        h5 {
+            margin: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: #232323;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 200px;
+            height: 200px;
+            background-color: #232323;
+            border-radius: 50%;
+
+            box-shadow: 0 0 15px 15px rgba(255, 255, 255, 0.281);
+            position: relative;
+        }
+
+        @keyframes mymove {
+            0% {
+                background-position: 0 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+
+            }
+
+            100% {
+                background-position: 0 50%;
+
+            }
+        }
+
+        .container .caed-box {
+            animation-name: mymove;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(132deg, #1dbdff, #4cff6e, #fa057e, #fdfc47, #24fe41);
+            background-size: 600% 600%;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .container .caed-box .box {
+            width: 170px;
+            height: 170px;
+            background-color: #232323;
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            top: 5px;
+            left: 5px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container .caed-box .box h5 {
+            color: white;
+        }
+
+        .container .caed-box .box h1 {
+            color: white;
+        }
+
+
+
+        /* .container .caed-box {
+            animation-name: xxx;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="caed-box">
+            <div class="box">
+                <h5>LOADING</h5>
+                <h1></h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        var deg = 0;
+        var text = document.querySelector("h1")
+        // setInterval(function () {
+        //     deg++
+        //     $(".caed-box").css("background-image", "linear-gradient(" + deg + "deg, #1dbdff, #4cff6e, #fa057e, #fdfc47, #24fe41)")
+        //     if (deg >= 360) {
+        //         deg = 0
+        //     }
+        //     // console.log(deg);
+
+        // })
+        var nub = 1
+
+        var inter = function () {
+            nub++
+            if (nub >= 100) {
+
+                clearInterval(id);
+                setTimeout(function () {
+                    nub = 0
+
+                    id = setInterval(function () {
+                        inter();
+                    }, 100)
+                }, 1000)
+            }
+            if (nub === 1) {
+                clearInterval(id);
+                setTimeout(function () {
+                    
+
+                    id = setInterval(function () {
+                        inter();
+                    }, 100)
+                }, 1000)
+            }
+            text.innerText = nub + "%";
+        }
+        var id = setInterval(function () {
+            inter();
+        }, 100)
+
+
+    </script>
+</body>
+
+</html>

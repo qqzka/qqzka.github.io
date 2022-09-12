@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.css">
+    <style>
+        body {
+            position: relative;
+        }
+
+        .beijin {
+            height: 1000px;
+            background-image: url('./imgs/41c1da37f9f743bdea11b27c1a158bb.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        ul.stage {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            top: calc(50% - 250px);
+            left: calc(50% - 250px);
+        }
+
+        ul.stage li {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            margin: 5px;
+            /* transform: rotateY(180deg); */
+            transition: all .5s;
+            /* color: white; */
+        }
+
+        ul.stage li i {
+            opacity: 0;
+            transition: all .3s;
+            width: 100px;
+            height: 100px;
+            font-size: 2em;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        ul.stage li.open i {
+            /* color: white; */
+            opacity: 1;
+
+        }
+
+        ul.stage li.bbt i {
+            /* color: cornflowerblue; */
+            opacity: 1;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="beijin"></div>
+    <ul class="stage"></ul>
+
+    <script>
+        var stage = document.querySelector(".stage")
+        var icons = ["fa-bath",
+            "fa-anchor",
+            "fa-moon-o",
+            "fa-search",
+            "fa-bank",
+            "fa-bug",
+            "fa-bus",
+            "fa-child"];
+
+        function doubleAll(arr) {
+            var tmp = [];
+            arr.forEach(function (e) {
+                tmp.push(e);
+                tmp.push(e);
+            });
+            return tmp;
+        }
+        function shuffle(arr) {
+            arr.sort(function () {
+                return Math.random() - 0.5;
+            });
+            return arr;
+        }
+
+        var d = doubleAll(icons)
+        var arr = d;
+        shuffle(d)
+        arr.forEach(function (icon) {
+            var node = document.createElement("li")
+            node.innerHTML = '<i class="fa ' + icon + '"></i>';
+            stage.appendChild(node);
+
+            // var list = document.getElementsByClassName("stage")[0].getElementsByTagName("li");
+            node.onclick = function () {
+                // node.children[0].style.opacity = '1'
+                if (!this.classList.contains("equal")) {
+                    // console.log(this);
+                    this.classList.add("open")
+
+                    var openDom = [];
+                    for (var i = 0; i < stage.children.length; i++) {
+                        if (stage.children[i].classList.contains("open")) {
+                            openDom.push(stage.children[i])
+                            node.style.transform = "rotateY(180deg)";
+                        }
+                    }
+
+                    if (openDom.length === 2) {
+                        setTimeout(function () {
+                            openDom[0].classList.remove("open");
+                            openDom[1].classList.remove("open");
+                            openDom[0].style.transform = "rotateY(0deg)";
+                            openDom[1].style.transform = "rotateY(0deg)";
+
+
+                            if (openDom[0].innerHTML === openDom[1].innerHTML) {
+                                openDom[0].classList.add("bbt")
+                                openDom[1].classList.add("bbt")
+                                openDom[0].style.transform = "rotateY(180deg)";
+                                openDom[1].style.transform = "rotateY(180deg)";
+                            }
+                        }, 500)
+                    }
+                }
+            }
+        })
+
+
+
+
+
+
+                // arr.forEach(function (icon) {
+        //     var node = document.createElement("li")
+        //     node.innerHTML = '<i class="fa ' + icon + '"></i>';
+        //     stage.appendChild(node);
+        //     var list = document.getElementsByClassName("stage")[0].getElementsByTagName("li")[0]
+        //     for (var i = 0; i < list.length; i++) {
+        //         list[i].title = i;
+        //         list[i].onclick = function () {
+        //             console.log(this.title, typeof this.title);
+
+        //         }
+        //     }
+        // })
+    </script>
+
+
+
+</body>
+
+</html>

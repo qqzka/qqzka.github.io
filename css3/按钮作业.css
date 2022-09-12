@@ -1,0 +1,960 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  margin: 7px;
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+}
+.transition {
+  width: 800px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.transition h1 {
+  margin: 50px 0;
+}
+.transition .grow {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+}
+.transition .grow:hover {
+  transition: all 0.4s;
+  transform: scale(1.1);
+}
+.transition .shrink {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+}
+.transition .shrink:hover {
+  transition: all 0.4s;
+  transform: scale(0.9);
+}
+.transition .pulse {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+}
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+.transition .pulse:hover {
+  animation-name: pulse;
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.transition .pulsegrow {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+}
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.transition .pulsegrow:hover {
+  animation-name: grow;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.transition .pulseshrink {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+}
+@keyframes shrink {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+.transition .pulseshrink:hover {
+  animation-name: shrink;
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.transition .push {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+}
+@keyframes push {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
+}
+.transition .push:hover {
+  animation-name: push;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+.transition .pop {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+}
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.transition .pop:hover {
+  animation-name: pop;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+.transition .bouncein {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+}
+@keyframes bouncein {
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+.transition .bouncein:hover {
+  animation-name: bouncein;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+.transition .bounceout {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+}
+@keyframes bounceout {
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+.transition .bounceout:hover {
+  animation-name: bounceout;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+.transition .rotate {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+}
+.transition .rotate:hover {
+  transition: all 0.3s;
+  transform: rotate(5deg);
+}
+.transition .growrotate {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+}
+.transition .growrotate:hover {
+  transition: all 0.3s;
+  transform: rotate(8deg);
+}
+.transition .float {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+  transition: all 0.5s;
+  position: relative;
+  top: 0;
+}
+.transition .float:hover {
+  top: -10px;
+}
+.transition .sink {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+  transition: all 0.5s;
+  position: relative;
+  bottom: 0;
+}
+.transition .sink:hover {
+  bottom: -10px;
+}
+.transition .bob {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+  position: relative;
+}
+@keyframes bob {
+  0% {
+    top: -6px;
+  }
+  100% {
+    top: -9px;
+  }
+}
+.transition .bob:hover {
+  animation-name: bob;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.transition .hvr-hang {
+  display: inline-block;
+  padding: 16px;
+  background-color: #e1e1e1;
+  color: #666;
+  position: relative;
+}
+@keyframes hvr-hang {
+  0% {
+    top: 5px;
+  }
+  100% {
+    top: 9px;
+  }
+}
+.transition .hvr-hang:hover {
+  animation-name: hvr-hang;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.transition .hvr-skew:hover {
+  transition: all 0.3s;
+  transform: skewX(-10deg);
+}
+.transition .hvr-skew-forward:hover {
+  transition: all 0.3s;
+  transform: skewX(-10deg);
+  transform-origin: bottom;
+}
+.transition .hvr-skew-backward:hover {
+  transition: all 0.3s;
+  transform: skewX(10deg);
+  transform-origin: bottom;
+}
+@keyframes horizon {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 6px;
+  }
+  40% {
+    left: -6px;
+  }
+  60% {
+    left: 4px;
+  }
+  80% {
+    left: -4px;
+  }
+  100% {
+    left: 0;
+  }
+}
+.transition .hvr-wobble-horizontal:hover {
+  animation-name: horizon;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  position: relative;
+  left: 0;
+}
+@keyframes vertical {
+  0% {
+    top: 0;
+  }
+  20% {
+    top: 6px;
+  }
+  40% {
+    top: -6px;
+  }
+  60% {
+    top: 4px;
+  }
+  80% {
+    top: -4px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.transition .hvr-wobble-vertical:hover {
+  animation-name: vertical;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  position: relative;
+  top: 0;
+}
+@keyframes bottom_right {
+  0% {
+    bottom: 0;
+    right: 0;
+  }
+  20% {
+    bottom: -8px;
+    right: -8px;
+  }
+  40% {
+    bottom: 8px;
+    right: 8px;
+  }
+  60% {
+    bottom: -4px;
+    right: -4px;
+  }
+  80% {
+    bottom: 4px;
+    right: 4px;
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+  }
+}
+.transition .hvr-wobble-to-bottom-right:hover {
+  animation-name: bottom_right;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  position: relative;
+}
+@keyframes top-right {
+  0% {
+    top: 0;
+    right: 0;
+  }
+  20% {
+    top: -8px;
+    right: -8px;
+  }
+  40% {
+    top: 8px;
+    right: 8px;
+  }
+  60% {
+    top: -4px;
+    right: -4px;
+  }
+  80% {
+    top: 4px;
+    right: 4px;
+  }
+  100% {
+    top: 0;
+    right: 0;
+  }
+}
+.transition .hvr-wobble-to-top-right:hover {
+  animation-name: top-right;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  position: relative;
+}
+@keyframes xxx {
+  0% {
+    transform: skewX(0deg);
+  }
+  20% {
+    transform: skewX(-10deg);
+  }
+  40% {
+    transform: skewX(10deg);
+  }
+  60% {
+    transform: skewX(-8deg);
+  }
+  80% {
+    transform: skewX(8deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+.transition .hvr-wobble-top:hover {
+  animation-name: xxx;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  transform-origin: bottom;
+}
+@keyframes xxx {
+  0% {
+    transform: skewX(0deg);
+  }
+  20% {
+    transform: skewX(-10deg);
+  }
+  40% {
+    transform: skewX(10deg);
+  }
+  60% {
+    transform: skewX(-8deg);
+  }
+  80% {
+    transform: skewX(8deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+.transition .hvr-wobble-bottom:hover {
+  animation-name: xxx;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  transform-origin: top;
+}
+@keyframes skew {
+  0% {
+    transform: skewX(0deg);
+  }
+  20% {
+    transform: skewX(-10deg);
+  }
+  40% {
+    transform: skewX(10deg);
+  }
+  60% {
+    transform: skewX(-8deg);
+  }
+  80% {
+    transform: skewX(8deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+.transition .hvr-wobble-skew:hover {
+  animation-name: skew;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+}
+@keyframes buzz {
+  25% {
+    transform: translateX(2px) rotate(2deg);
+  }
+  50% {
+    transform: translateX(-2px) rotate(-2deg);
+  }
+  75% {
+    transform: translateX(2px) rotate(2deg);
+  }
+  100% {
+    transform: translateX(-2px) rotate(-2deg);
+  }
+}
+.transition .hvr-buzz:hover {
+  animation-name: buzz;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+@keyframes buzz-out {
+  25% {
+    transform: translateX(4px) rotate(2deg);
+  }
+  50% {
+    transform: translateX(-4px) rotate(-2deg);
+  }
+  75% {
+    transform: translateX(2px) rotate(2deg);
+  }
+  100% {
+    transform: translateX(-2px) rotate(-2deg);
+  }
+}
+.transition .hvr-buzz-out:hover {
+  animation-name: buzz-out;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+  transform-origin: bottom;
+}
+.transition .hvr-forward {
+  transition: all 0.3s;
+  position: relative;
+  left: 0px;
+}
+.transition .hvr-forward:hover {
+  position: relative;
+  left: 8px;
+}
+.transition .hvr-backward {
+  transition: all 0.3s;
+  position: relative;
+  right: 0px;
+}
+.transition .hvr-backward:hover {
+  position: relative;
+  right: 8px;
+}
+.transition .hvr-fade {
+  transition: all 0.5s;
+}
+.transition .hvr-fade:hover {
+  color: white;
+  background-color: #2098D1;
+}
+.transition .hvr-back-pulse {
+  transition: all 0.5s;
+}
+.transition .hvr-back-pulse:hover {
+  color: white;
+  background-color: #2098D1;
+}
+.transition .hvr-sweep-to-right {
+  position: relative;
+  transition: all 0.1s;
+  z-index: 999;
+}
+.transition .hvr-sweep-to-right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  transition: all 0.5s;
+}
+.transition .hvr-sweep-to-right:hover {
+  color: white;
+}
+.transition .hvr-sweep-to-right:hover::after {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: #2098D1;
+}
+.transition .hvr-sweep-to-left {
+  position: relative;
+  transition: all 0.1s;
+  z-index: 999;
+}
+.transition .hvr-sweep-to-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  transition: all 0.5s;
+}
+.transition .hvr-sweep-to-left:hover {
+  color: white;
+}
+.transition .hvr-sweep-to-left:hover::after {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: #2098D1;
+}
+.transition .hvr-sweep-to-bottom {
+  position: relative;
+  transition: all 0.1s;
+  z-index: 999;
+}
+.transition .hvr-sweep-to-bottom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0%;
+  width: 100%;
+  transition: all 0.5s;
+  transform-origin: bottom;
+}
+.transition .hvr-sweep-to-bottom:hover {
+  color: white;
+}
+.transition .hvr-sweep-to-bottom:hover::after {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: #2098D1;
+}
+.transition .hvr-sweep-to-top {
+  position: relative;
+  transition: all 0.1s;
+  z-index: 999;
+}
+.transition .hvr-sweep-to-top::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0%;
+  width: 100%;
+  transition: all 0.5s;
+  transform-origin: bottom;
+}
+.transition .hvr-sweep-to-top:hover {
+  color: white;
+}
+.transition .hvr-sweep-to-top:hover::after {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: #2098D1;
+}
+@keyframes hvr-bounce-to-right {
+  0% {
+    width: 0%;
+  }
+  70% {
+    width: 95%;
+  }
+  80% {
+    width: 80%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.transition .hvr-bounce-to-right {
+  position: relative;
+  z-index: 999;
+}
+.transition .hvr-bounce-to-right::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 0%;
+  transition: all 0.8s;
+  transform-origin: bottom;
+}
+.transition .hvr-bounce-to-right:hover {
+  color: white;
+}
+.transition .hvr-bounce-to-right:hover::after {
+  animation-name: hvr-bounce-to-right;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: #2098D1;
+}
+@keyframes hvr-bounce-to-left {
+  0% {
+    width: 0%;
+  }
+  70% {
+    width: 95%;
+  }
+  80% {
+    width: 80%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.transition .hvr-bounce-to-left {
+  position: relative;
+  z-index: 999;
+}
+.transition .hvr-bounce-to-left::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 0%;
+  transform-origin: bottom;
+}
+.transition .hvr-bounce-to-left:hover {
+  color: white;
+}
+.transition .hvr-bounce-to-left:hover::after {
+  animation-name: hvr-bounce-to-left;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: #2098D1;
+}
+@keyframes hvr-bounce-to-bottom {
+  0% {
+    height: 0%;
+  }
+  70% {
+    height: 95%;
+  }
+  80% {
+    height: 80%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.transition .hvr-bounce-to-bottom {
+  position: relative;
+  z-index: 999;
+}
+.transition .hvr-bounce-to-bottom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0%;
+  width: 100%;
+}
+.transition .hvr-bounce-to-bottom:hover {
+  color: white;
+}
+.transition .hvr-bounce-to-bottom:hover::after {
+  animation-name: hvr-bounce-to-bottom;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: #2098D1;
+}
+@keyframes hvr-bounce-to-top {
+  0% {
+    height: 0%;
+  }
+  70% {
+    height: 95%;
+  }
+  80% {
+    height: 80%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.transition .hvr-bounce-to-top {
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+}
+.transition .hvr-bounce-to-top::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0%;
+  width: 100%;
+}
+.transition .hvr-bounce-to-top:hover {
+  color: white;
+}
+.transition .hvr-bounce-to-top:hover::after {
+  animation-name: hvr-bounce-to-top;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: #2098D1;
+}
+.transition .hvr-radial-out {
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+}
+.transition .hvr-radial-out::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100%;
+  transform: scale(0);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.transition .hvr-radial-out:hover {
+  color: white;
+}
+.transition .hvr-radial-out:hover::after {
+  z-index: -1;
+  background-color: #2098D1;
+  transform: scale(2);
+}
+.transition .hvr-radial-in {
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+  z-index: 1;
+  transition-duration: 0.3s;
+}
+.transition .hvr-radial-in::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100%;
+  transform: scale(3);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+  background: #e1e1e1;
+}
+.transition .hvr-radial-in:hover {
+  color: white;
+  background-color: #2098D1;
+}
+.transition .hvr-radial-in:hover::after {
+  transform: scale(0);
+}
+.transition .hvr-rectangle-in {
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+  transition-duration: 0.5s;
+}
+.transition .hvr-rectangle-in::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(3);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+  background: #e1e1e1;
+}
+.transition .hvr-rectangle-in:hover {
+  color: white;
+  background-color: #2098D1;
+}
+.transition .hvr-rectangle-in:hover::after {
+  transform: scale(0);
+}
+.transition .hvr-rectangle-out {
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+}
+.transition .hvr-rectangle-out::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.transition .hvr-rectangle-out:hover {
+  color: white;
+}
+.transition .hvr-rectangle-out:hover::after {
+  z-index: -1;
+  background-color: #2098D1;
+  transform: scale(1);
+}
+.transition .hvr-shutter-in-horizontal {
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+}
+.transition .hvr-shutter-in-horizontal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  width: 50%;
+}
+.transition .hvr-shutter-in-horizontal:hover {
+  color: white;
+}
+.transition .hvr-shutter-in-horizontal:hover::after {
+  z-index: -1;
+  background-color: #2098D1;
+  transform: scale(1);
+}
+/*# sourceMappingURL=./按钮作业.css.map */

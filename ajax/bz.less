@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    .pic {
+        width: 480px;
+        height: 270px;
+        position: relative;
+        p{
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            color: white;
+        }
+        .img {
+            width: 480px;
+            height: 270px;
+            position: relative;
+            // z-index: 2;
+            img {
+                width: 480px;
+                height: 270px;
+            }
+            div{
+                width: 300px;
+                height: 10px;
+                display: inline-block;
+                color: white;
+                font-size: 0.01rem;
+                transform: scale(0.5);
+                position: absolute;
+                top: 10px;
+                left: 110px;
+                font-weight: 10;
+                line-height: 10px;
+                font-size: 20px;
+            }
+        }
+
+        .jlt {
+            // width: 200px;
+            // height: 110px;
+            width: 120px;
+            height: 48px;
+            background-image: url(./img/精灵图.png);
+            // background-image: url(./img/hmbbjlt.jpg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-position: -849px -212px;
+            // background-position: -200px 0;
+            pointer-events: none;
+        }
+
+        .mask {
+            
+            height: 260px;
+            background-color: rgba(0, 0, 0, 0.186);
+            position: absolute;
+            bottom: 0;
+        }
+
+        .progress-bar {
+            
+            height: 2px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.678);
+            padding: 4px 0;
+            transition: all .3s;
+            span {
+                
+                display: block;
+                width: 0%;
+                height: 2px;
+                background-color: white;
+                
+            }
+        }
+        .beijin{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 480px;
+            height: 270px;
+            // background-image: url(./img/hmbbjlt.jpg);
+            background-position: 0px 0;
+            background-repeat: no-repeat;
+            background-size: 1000%;
+            z-index: -1;
+            
+        }
+    }
+}

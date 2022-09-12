@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./别踩白块.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="begin">
+            <h1>别踩白块儿</h1>
+            <span class="start">开始</span>
+        </div>
+        <div class="game">
+
+        </div>
+        <div class="over">
+            <h1>Game over</h1>
+            <p class="goal"></p>
+            <span class="started">重新开始</span>
+        </div>
+        <div class="score">0</div>
+    </div>
+    <script>
+        var begEl = document.querySelector(".begin")
+        var beginEl = document.querySelector(".begin .start")
+        var started = document.querySelector(".over .started")
+        var goalEl = document.querySelector(".over .goal")
+        var gameEl = document.querySelector(".game")
+        var overEl = document.querySelector(".over")
+        var scoreEl = document.querySelector(".score")
+        var boxEl = document.querySelector(".box")
+
+        var dots = [];
+        var score = 0;
+        var speed = 0.01;
+
+
+
+        function Diamond(y) {
+            this.x = Math.floor(Math.random() * 4);
+            this.y = y;
+            this.node = document.createElement("i")
+            this.updateViwe();
+            gameEl.appendChild(this.node)
+            //添加点击事件
+            var _this = this
+            this.node.onclick = function () {
+                _this.node.classList.add("played")
+                _this.played = true;
+                event.stopPropagation();
+
+                score++
+                if (score % 5 === 0) {
+                    speed += 0.001;
+                }
+                scoreEl.innerHTML = score;
+                goalEl.innerHTML = "得分：" + score;
+
+            }
+        }
+
+        //失败以后清除数据
+        started.onclick = function () {
+            event.stopPropagation();
+            gameEl.innerHTML = "";
+            dots.splice(0)
+            score = 0;
+            scoreEl.innerHTML = score;
+            overEl.style.zIndex = "0";
+            overEl.style.display = "none";
+            goalEl.innerHTML = "";
+            speed = 0.01;
+            init();
+            id = setInterval(function () {
+                content();
+            }, 10)
+
+        }
+        //方块的大小
+        Diamond.prototype.updateViwe = function () {
+            this.node.style.top = this.y * 150 + 'px';
+            this.node.style.left = this.x * 110 + 'px';
+        }
+
+        // 移动速度
+        Diamond.prototype.move = function () {
+            this.y += speed
+        }
+        //初始化
+        function init() {
+            for (var i = 3; i >= 0; i--) {
+                var d = new Diamond(i - 1)
+                dots.push(d)
+
+            }
+        }
+
+        //开始的遮罩层
+        beginEl.onclick = function () {
+            begEl.style.display = "none"
+            init()
+        }
+
+
+        //让方块动起来
+        var id = setInterval(function () {
+            content();
+        }, 10);
+        function content() {
+            dots.forEach(function (dot) {
+                dot.updateViwe()
+                dot.move()
+            })
+            //生成方块
+            if (dots[dots.length - 1].y >= -speed) {
+                var d = new Diamond(-1)
+                dots.push(d)
+            }
+            //碰到底部结束
+            var base = dots.filter(function (dot) {
+                return !dot.played
+            })[0]
+            if (base && (base.y + 1) * 150 >= 680) {
+                clearInterval(id);
+                overEl.style.display = "block"
+                overEl.style.zIndex = "10"
+            }
+            var basell = dots.filter(function (dot) {
+                return dot.played;
+            })[0]
+            if (basell && basell.y * 150 >= 680) {
+                gameEl.removeChild(basell.node)
+                dots.splice(basell, 1)
+            }
+            // 点击方块以外的地方结束游戏
+            boxEl.onclick = function () {
+                clearInterval(id)
+                overEl.style.display = "block"
+                overEl.style.zIndex = "10"
+            }
+        }
+        // content()
+
+
+    </script>
+</body>
+
+</html>

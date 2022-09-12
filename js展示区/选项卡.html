@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .box {
+            width: 1000px;
+            height: 500px;
+            margin-top: 50px;
+        }
+
+        .box .header {
+            width: 540px;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 28px;
+        }
+
+        .box .header h2 {
+            width: 80px;
+            text-align: center;
+            font-size: 20px;
+            color: #a2a2a2;
+            border-radius: 10px;
+            background-color: #f7f7f7;
+            padding: 10px 20px;
+            box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+        }
+
+        .box .title {
+            width: 540px;
+            height: 200px;
+
+
+            position: relative;
+
+        }
+
+        .box .title .one {
+            width: 448px;
+            background-color: #f4f4f4;
+            border-radius: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            padding: 46px;
+            box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+
+        }
+
+        .box .title .one:nth-child(1) {
+            opacity: 1;
+        }
+
+        .box .title .one p {
+            color: #a2a2a2;
+            margin-bottom: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="header">
+            <h2>Mercury</h2>
+            <h2>Venus</h2>
+            <h2>Earth</h2>
+            <h2>Mars</h2>
+        </div>
+        <div class="title">
+            <div class="one">
+                <p>Mercury is the smallest and innermost planet in the Solar System.</p>
+                <p>Its orbit around the Sun takes 87.97 days, the shortest of all the planets in the Solar System.</p>
+                <p>It is named after the Roman deity Mercury, the messenger of the gods.</p>
+                <p>Learn more➡️</p>
+            </div>
+            <div class="one">
+                <p>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.</p>
+                <p>Venus orbits the Sun every 224.7 Earth days.</p>
+                <p>As the second-brightest natural object in the night sky after the Moon, Venus can cast shadows and,
+                    rarely, is visible to the naked eye in broad daylight.</p>
+                <p>Learn more➡️</p>
+            </div>
+            <div class="one">
+                <p>Earth is the third planet from the Sun.</p>
+                <p>Earth orbits around the Sun in 365.256 days, a period known as an Earth sidereal year. During this
+                    time, Earth rotates about its axis about 366.256 times.</p>
+                <p>Earth's axis of rotation is tilted with respect to its orbital plane, producing seasons on Earth.</p>
+                <p>Learn more➡️</p>
+            </div>
+            <div class="one">
+                <p>Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after
+                    Mercury.</p>
+                <p>In English, Mars carries a name of the Roman god of war and is often referred to as the 'Red Planet'.
+                    The latter refers to the effect of the iron oxide prevalent on Mars' surface.</p>
+                <p>Mars is a terrestrial planet with a thin atmosphere.</p>
+                <p>Learn more➡️</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var dots = document.querySelectorAll(".header h2")
+        var title = document.querySelectorAll(".title .one")
+        //初始化值
+        var initialize = 0
+        //初始化显示的图片和高亮的按钮
+        for (var i = 0; i < title.length; i++) {
+            if (i == initialize) {
+                title[i].style.opacity = 1;
+                dots[i].style.backgroundColor = "white"
+                dots[i].style.boxShadow = "inset 3px 3px 5px #cbcbcb, inset -3px -3px 5px #ffffff"
+            } else {
+                title[i].style.opacity = 0;
+                dots[i].style.backgroundColor = ""
+                dots[i].style.boxShadow = ""
+
+            }
+        }
+        //点击按钮显示不同的文字 以及对应的按钮高亮
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].title = i;
+            dots[i].onclick = function () {
+                for (var i = 0; i < title.length; i++) {
+                    if (i == this.title) {
+                    title[i].style.opacity = 1;
+                    dots[i].style.backgroundColor = "white"
+                    dots[i].style.boxShadow = "inset 3px 3px 5px #cbcbcb, inset -3px -3px 5px #ffffff"
+                } else {
+                    title[i].style.opacity = 0;
+                    dots[i].style.backgroundColor = ""
+                    dots[i].style.boxShadow = ""
+                }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

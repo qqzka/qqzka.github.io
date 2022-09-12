@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.box .pic {
+  width: 480px;
+  height: 270px;
+  position: relative;
+}
+.box .pic p {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  color: white;
+}
+.box .pic .img {
+  width: 480px;
+  height: 270px;
+  position: relative;
+}
+.box .pic .img img {
+  width: 480px;
+  height: 270px;
+}
+.box .pic .img div {
+  width: 300px;
+  height: 10px;
+  display: inline-block;
+  color: white;
+  font-size: 0.01rem;
+  transform: scale(0.5);
+  position: absolute;
+  top: 10px;
+  left: 110px;
+  font-weight: 10;
+  line-height: 10px;
+  font-size: 20px;
+}
+.box .pic .jlt {
+  width: 120px;
+  height: 48px;
+  background-image: url(img/精灵图.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: -849px -212px;
+  pointer-events: none;
+}
+.box .pic .mask {
+  height: 260px;
+  background-color: rgba(0, 0, 0, 0.186);
+  position: absolute;
+  bottom: 0;
+}
+.box .pic .progress-bar {
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.678);
+  padding: 4px 0;
+  transition: all 0.3s;
+}
+.box .pic .progress-bar span {
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+}
+.box .pic .beijin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 270px;
+  background-position: 0px 0;
+  background-repeat: no-repeat;
+  background-size: 1000%;
+  z-index: -1;
+}
+/*# sourceMappingURL=./bz.css.map */

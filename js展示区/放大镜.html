@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .fangda {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .fangda .thumb {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .fangda .thumb img {
+            width: 100%;
+            display: block;
+        }
+
+        .fangda .thumb .mask {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .fangda .zoom {
+            width: 400px;
+            height: 400px;
+            background-color: lightblue;
+
+            background-image: url(./imgs/01.jpg);
+            background-repeat: no-repeat;
+
+            /* background-size: 300%; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fangda">
+        <div class="thumb">
+            <img src="./imgs/01.jpg" alt="">
+            <div class="mask"></div>
+        </div>
+        <div class="zoom"></div>
+    </div>
+
+    <script>
+        var level = 2; //放大倍数
+        var thumbEl = document.querySelector('.fangda .thumb')
+        // querySelector 只能选中一个   querySelector 多个（节点列表）  也是类数组
+        var maskEl = document.querySelector('.fangda .thumb .mask')
+        var zoomEl = document.querySelector('.fangda .zoom')
+
+        //根据放大级别设置背景图的大小
+        // zoomEl.style.backgroundSize = level * 100 +"%";    //300%
+        zoomEl.style['background-size'] = level * 100 + "%";   //300%
+
+        //获取缩略图的宽高
+        var thumbWidth = thumbEl.offsetWidth;
+        var thumbHeight = thumbEl.offsetHeight;
+        //计算mask的高宽
+        var maskWidth = thumbWidth / level;   //计算遮罩层的宽度
+
+        var maskHeight = thumbHeight / level;  //计算遮罩层的高度
+
+
+        //设置mask的高宽
+        maskEl.style.width = maskWidth + 'px';  //设置遮罩层的宽度
+        maskEl.style.height = maskHeight + 'px'; //设置遮罩的高度
+
+        //获取缩略图距离左边浏览器的距离
+        var offsteLeft = thumbEl.offsetLeft;
+        var offsteTop = thumbEl.offsetTop;
+        //获取zoom元素的宽高 （不包括边框）
+        var zoomX = zoomEl.clientWidth;
+        var zoomY = zoomEl.clientHeight;
+
+        //鼠标移动的时候
+        thumbEl.onmousemove = function () {
+
+            //取到鼠标移动的位置
+            // console.log(event.offsetX, event.offsetY);
+            // console.log(event.pageX - offsteLeft, event.pageY - offsteTop);
+
+            //鼠标的坐标
+            var mx = event.pageX - offsteLeft;
+            var my = event.pageY - offsteTop;
+            //让鼠标在mask里面居中    遮罩的左上角的坐标
+            var maskX = mx - maskWidth / 2;
+            var maskY = my - maskHeight / 2;
+
+            // 限定遮罩层移动的范围
+            if (maskX < 0) {
+                maskX = 0
+            }
+            if (maskX > thumbWidth - maskWidth) {
+                maskX = thumbWidth - maskWidth
+            }
+            if (maskY < 0) {
+                maskY = 0
+            }
+            if (maskY > thumbHeight - maskHeight) {
+                maskY = thumbHeight - maskHeight
+            }
+
+            //遮罩层跟着鼠标走 = 鼠标的坐标 - 遮罩层的宽度（高度）/ 2
+            //遮罩层的宽和高 / 2 可以让鼠标在遮罩层的中间
+            maskEl.style.top = maskY + 'px';
+            maskEl.style.left = maskX + 'px';
+            //放大图随着遮罩移动
+            zoomEl.style.backgroundPosition = -(zoomX / maskWidth) * maskX + 'px ' + -(zoomY / maskHeight) * maskY + 'px'
+
+
+        };
+    </script>
+</body>
+
+</html>

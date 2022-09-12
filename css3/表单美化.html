@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./表单美化.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="inner-input">
+        <label for="" class="lab">10.销售部</label>
+        <div class="btn-off-no">
+            <label>
+                <input type="checkbox" name="" id="">
+                <div class="offno">
+                    <div class="blank"></div>
+                    <div class="off">OFF</div>
+                    <div class="no">ON</div>
+                </div>
+            </label>
+        </div>
+    </div>
+    <div class="inner-input">
+        <label for="" class="lab">20.市场部</label>
+        <div class="btn-off-no">
+            <label>
+                <input type="checkbox" name="" id="">
+                <div class="offno">
+                    <div class="blank"></div>
+                    <div class="off">OFF</div>
+                    <div class="no">ON</div>
+                </div>
+            </label>
+        </div>
+    </div>
+    <div class="inner-input">
+        <label for="" class="lab">30.财务部</label>
+        <div class="btn-off-no">
+            <label>
+                <input type="checkbox" name="" id="cwb" checked>
+                <div class="offno">
+                    <div class="blank"></div>
+                    <div class="off">OFF</div>
+                    <div class="no">ON</div>
+                </div>
+            </label>
+        </div>
+    </div>
+    <div class="inner-input">
+        <label for="" class="lab">40.设计部</label>
+        <div class="btn-off-no">
+            <label>
+                <input type="checkbox" name="" id="yfb">
+                <div class="offno">
+                    <div class="blank"></div>
+                    <div class="off">OFF</div>
+                    <div class="no">ON</div>
+                </div>
+            </label>
+        </div>
+    </div>
+    <div class="inner-input">
+        <label for="" class="lab">50.研发部</label>
+        <div class="btn-off-no">
+            <label>
+                <input type="checkbox" name="" id="" checked>
+                <div class="offno">
+                    <div class="blank"></div>
+                    <div class="off">OFF</div>
+                    <div class="no">ON</div>
+                </div>
+            </label>
+        </div>
+    </div>
+    <div class="inner-input-btn">
+        <button class="btn1">选中设计部</button>
+        <button class="btn0">取消财务部</button>
+        <button class="reset">重置</button>
+    </div>
+    <script>
+        $(".btn1").click(function () {
+            $("#yfb").attr("checked", "checked")
+        })
+        $(".btn0").click(function () {
+            $("#cwb").removeAttr("checked")
+        })
+        $(".reset").click(function () {
+            window.location.reload();
+        })
+    </script>
+</body>
+
+</html>

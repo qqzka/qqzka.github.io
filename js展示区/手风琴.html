@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .box {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            background-image: url(./imgs/1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .stage {
+            width: 660px;
+            height: 400px;
+            display: flex;
+
+            background-color: lightblue;
+        }
+
+        .stage div {
+            width: 60px;
+            height: 100%;
+            background-size: auto 100%;
+            background-position: top center;
+            transition: all 0.3s;
+        }
+
+        .stage div:nth-child(1) {
+            background-image: url(./imgs/1.jpg);
+        }
+
+        .stage div:nth-child(2) {
+            background-image: url(./imgs/2.jpg);
+        }
+
+        .stage div:nth-child(3) {
+            background-image: url(./imgs/3.jpg);
+        }
+
+        .stage div:nth-child(4) {
+            background-image: url(./imgs/4.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="stage">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script>
+        var arr = ["./imgs/1.jpg", "./imgs/2.jpg", "./imgs/3.jpg", "./imgs/4.jpg"];
+
+        var imgs = document.querySelectorAll(".stage div");
+        var box = document.querySelector(".box");
+
+        function init(n) {
+            imgs[n].style.width = "600px";
+            box.style.backgroundImage = "url(" + arr[n] + ")";
+        }
+        init(0);
+        imgs.forEach(function (img, i) {
+            img.onclick = function () {
+                imgs.forEach(function (el, index) {
+                    if (index === i) {
+                        el.style.width = "600px";
+                        box.style.backgroundImage = "url(" + arr[i] + ")";
+                    } else {
+                        el.style.width = "60px";
+
+                    }
+                }
+
+                );
+            };
+        });
+
+
+        // $(".stage div").click(function () { $(".stage div").css("width", "60px").eq($(this).index()).css("width", "600px") })
+    </script>
+</body>
+
+</html>
