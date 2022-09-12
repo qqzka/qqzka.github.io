@@ -1,0 +1,527 @@
+.page {
+  width: 100%;
+  height: 700px;
+}
+.page .wrappe {
+  width: 370px;
+  height: 650px;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  position: relative;
+}
+.page .wrappe .now {
+  background-color: white;
+  width: 370px;
+  position: relative;
+}
+.page .wrappe .now input {
+  margin: 15px 10px;
+  width: 350px;
+  font-size: 12px;
+  border: 2px solid #0086f6;
+  padding: 10px 15px;
+  border-radius: 50px;
+  outline: none;
+}
+.page .wrappe .now i.fa {
+  width: 20px;
+  height: 20px;
+  font-size: 19px;
+  color: grey;
+  position: absolute;
+  top: 23px;
+  left: 20px;
+  margin-left: 10px;
+}
+.page .wrappe .content {
+  width: 350px;
+  height: 170px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  position: relative;
+}
+.page .wrappe .content .card1 {
+  width: 70px;
+  height: 170px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-around;
+  border-radius: 10px 0 0 10px;
+}
+.page .wrappe .content .card1 li {
+  width: 69px;
+  height: 60px;
+}
+.page .wrappe .content .card1 li img {
+  width: 28px;
+  height: 28px;
+}
+.page .wrappe .content .card1 li p {
+  font-size: 10px;
+}
+.page .wrappe .content .card1 li:nth-child(1) {
+  background-color: #fa7552;
+  border-radius: 10px 0 0 0;
+  color: white;
+  border-bottom: 1px solid white;
+}
+.page .wrappe .content .card1 li:nth-child(2) {
+  background-color: #fff5f1;
+  color: black;
+  border-bottom: 1px solid white;
+}
+.page .wrappe .content .card1 li:nth-child(3) {
+  background-color: #fff5f1;
+  color: black;
+  border-radius: 0 0 0 10px;
+}
+.page .wrappe .content .card2 {
+  width: 70px;
+  height: 170px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-around;
+}
+.page .wrappe .content .card2 li {
+  width: 69px;
+  height: 60px;
+}
+.page .wrappe .content .card2 li img {
+  width: 28px;
+  height: 28px;
+}
+.page .wrappe .content .card2 li p {
+  font-size: 10px;
+}
+.page .wrappe .content .card2 li:nth-child(1) {
+  background-color: #469afa;
+  color: white;
+  border-bottom: 1px solid white;
+}
+.page .wrappe .content .card2 li:nth-child(2) {
+  background-color: #eff9ff;
+  color: black;
+  border-bottom: 1px solid white;
+}
+.page .wrappe .content .card2 li:nth-child(3) {
+  background-color: #eff9ff;
+  color: black;
+}
+.page .wrappe .content .card3 {
+  width: 70px;
+  height: 170px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-around;
+}
+.page .wrappe .content .card3 li {
+  width: 69px;
+  height: 60px;
+}
+.page .wrappe .content .card3 li img {
+  width: 28px;
+  height: 28px;
+}
+.page .wrappe .content .card3 li p {
+  font-size: 10px;
+}
+.page .wrappe .content .card3 li:nth-child(1) {
+  background-color: #6394ff;
+  color: white;
+  border-bottom: 1px solid white;
+}
+.page .wrappe .content .card3 li:nth-child(2) {
+  background-color: #f2f5ff;
+  color: black;
+  border-bottom: 1px solid white;
+}
+.page .wrappe .content .card3 li:nth-child(3) {
+  background-color: #f2f5ff;
+  color: black;
+}
+.page .wrappe .content .card4 {
+  width: 70px;
+  height: 170px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-around;
+}
+.page .wrappe .content .card4 li {
+  width: 69px;
+  height: 60px;
+}
+.page .wrappe .content .card4 li img {
+  width: 28px;
+  height: 28px;
+}
+.page .wrappe .content .card4 li p {
+  font-size: 10px;
+}
+.page .wrappe .content .card4 li:nth-child(1) {
+  background-color: #46d2b4;
+  color: white;
+  border-bottom: 1px solid white;
+}
+.page .wrappe .content .card4 li:nth-child(2) {
+  background-color: #ecfcf8;
+  color: black;
+  border-bottom: 1px solid white;
+}
+.page .wrappe .content .card4 li:nth-child(3) {
+  background-color: #ecfcf8;
+  color: black;
+}
+.page .wrappe .content .card5 {
+  width: 70px;
+  height: 170px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-around;
+  border-radius: 0 10px 10px 0;
+}
+.page .wrappe .content .card5 li {
+  width: 69px;
+  height: 60px;
+}
+.page .wrappe .content .card5 li img {
+  width: 28px;
+  height: 28px;
+}
+.page .wrappe .content .card5 li p {
+  font-size: 10px;
+}
+.page .wrappe .content .card5 li:nth-child(1) {
+  background-color: #ff963e;
+  color: white;
+  border-radius: 0 10px 0 0;
+  border-bottom: 1px solid white;
+}
+.page .wrappe .content .card5 li:nth-child(2) {
+  background-color: #fff9f2;
+  color: black;
+  border-bottom: 1px solid white;
+}
+.page .wrappe .content .card5 li:nth-child(3) {
+  background-color: #fff9f2;
+  color: black;
+  border-radius: 0 0 10px 0;
+}
+.page .wrappe .toll {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .wrappe .toll p {
+  width: 15px;
+  height: 5px;
+  background-color: #0086f6;
+  border-radius: 50px;
+  margin-right: 2px;
+}
+.page .wrappe .toll h5 {
+  width: 5px;
+  height: 5px;
+  background-color: #cccccc;
+  border-radius: 50%;
+  margin-left: 2px;
+}
+.page .wrappe .box {
+  width: 370px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.page .wrappe .box .cont {
+  width: 175px;
+  height: 140px;
+  background-color: white;
+  border-radius: 10px;
+}
+.page .wrappe .box .cont .special {
+  width: 175px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .wrappe .box .cont .special img {
+  width: 70px;
+  height: 20px;
+  margin-left: 5px;
+}
+.page .wrappe .box .cont .special p {
+  width: 85px;
+  height: 20px;
+  background-color: #ffebe3;
+  color: red;
+  font-size: 10px;
+  border-radius: 2px;
+  margin-right: 5px;
+  line-height: 20px;
+}
+.page .wrappe .box .cont .hotel {
+  height: 80px;
+  width: 165px;
+  background-image: url(Images/6.1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 auto;
+}
+.page .wrappe .box .cont .hotel p {
+  font-size: 12px;
+  background-color: #494f54;
+  border-radius: 10px 0 10px 0;
+  display: inline-block;
+  color: white;
+  padding: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.page .wrappe .box .cont .hotel h3 {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  bottom: 5px;
+  left: 3px;
+}
+.page .wrappe .box .cont .price {
+  height: 25px;
+  color: #ff6600;
+  display: flex;
+  margin-left: 5px;
+}
+.page .wrappe .box .cont .price p {
+  font-weight: bold;
+}
+.page .wrappe .box .cont .price h4 {
+  font-weight: bold;
+}
+.page .wrappe .box .conte {
+  width: 175px;
+  height: 140px;
+  background-color: white;
+  border-radius: 10px;
+}
+.page .wrappe .box .conte .sift {
+  width: 175px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .wrappe .box .conte .sift img {
+  width: 70px;
+  height: 20px;
+  margin-left: 5px;
+}
+.page .wrappe .box .conte .sift p {
+  height: 20px;
+  background-color: #fdefd2;
+  color: #ae6e15;
+  font-size: 10px;
+  border-radius: 2px;
+  margin-right: 5px;
+  line-height: 20px;
+}
+.page .wrappe .box .conte .shanghai {
+  display: flex;
+  justify-content: space-around;
+}
+.page .wrappe .box .conte .shanghai .shanghai1 {
+  width: 80px;
+  height: 80px;
+  background-image: url(Images/7.1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  position: relative;
+}
+.page .wrappe .box .conte .shanghai .shanghai1 h3 {
+  font-size: 10px;
+  background-color: #e5c490;
+  display: inline-block;
+  border-radius: 10px 0 10px 0;
+  padding: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.page .wrappe .box .conte .shanghai .shanghai2 {
+  width: 80px;
+  height: 80px;
+  background-image: url(Images/7.2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  position: relative;
+}
+.page .wrappe .box .conte .shanghai .shanghai2 h3 {
+  font-size: 10px;
+  background-color: #e5c490;
+  display: inline-block;
+  border-radius: 10px 0 10px 0;
+  padding: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.page .wrappe .box .conte .title {
+  display: flex;
+  justify-content: space-around;
+}
+.page .wrappe .box .conte .title p {
+  width: 80px;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.page .wrappe .box .conte .title h2 {
+  width: 80px;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.page .wrappe .welfare {
+  width: 350px;
+  margin: 0 auto;
+}
+.page .wrappe .welfare img {
+  border-radius: 10px;
+}
+.page .wrappe .phone {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.page .wrappe .phone i {
+  border: 1px solid rgba(0, 0, 0, 0.419);
+  font-size: 12px;
+  padding: 5px 10px;
+  color: #333;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.page .wrappe .dizhi {
+  display: flex;
+  width: 350px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.page .wrappe .dizhi .wangzhan {
+  font-size: 12px;
+  margin-right: 15px;
+}
+.page .wrappe .dizhi .wangzhan a {
+  text-decoration: none;
+  color: #666;
+}
+.page .wrappe .dizhi p {
+  font-size: 12px;
+  color: #666;
+}
+.page .wrappe .dizhi .diannaoban {
+  font-size: 12px;
+  margin-left: 15px;
+}
+.page .wrappe .dizhi .diannaoban a {
+  text-decoration: none;
+  color: #666;
+}
+.page .wrappe .fool {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  color: #666;
+}
+.page .wrappe .fool p {
+  font-size: 12px;
+  padding-right: 5px;
+}
+.page .wrappe .fool span {
+  font-size: 12px;
+  padding-left: 5px;
+}
+.page .wrappe .jlt {
+  width: 370px;
+  height: 50px;
+  background-color: white;
+  position: fixed;
+}
+.page .wrappe .jlt ul.list {
+  width: 370px;
+  height: 32px;
+  display: flex;
+  justify-content: space-around;
+}
+.page .wrappe .jlt ul.list li {
+  width: 370px;
+  height: 32px;
+}
+.page .wrappe .jlt ul.list li:nth-child(1) {
+  width: 32px;
+  height: 32px;
+  background-image: url(Images/8.png);
+  background-repeat: no-repeat;
+  background-position-y: 0;
+  background-size: cover;
+}
+.page .wrappe .jlt ul.list li:nth-child(2) {
+  width: 32px;
+  height: 32px;
+  background-image: url(Images/8.png);
+  background-repeat: no-repeat;
+  background-position-y: -32px;
+  background-size: cover;
+}
+.page .wrappe .jlt ul.list li:nth-child(3) {
+  width: 32px;
+  height: 32px;
+  background-image: url(Images/8.png);
+  background-repeat: no-repeat;
+  background-position-y: -64px;
+  background-size: cover;
+}
+.page .wrappe .jlt ul.list li:nth-child(4) {
+  width: 32px;
+  height: 32px;
+  background-image: url(Images/8.png);
+  background-repeat: no-repeat;
+  background-position-y: -96px;
+  background-size: cover;
+}
+.page .wrappe .jlt .title {
+  display: flex;
+  justify-content: space-around;
+}
+.page .wrappe .jlt .title p {
+  font-size: 12px;
+}
+/*# sourceMappingURL=./携程.css.map */

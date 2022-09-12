@@ -27,7 +27,7 @@
                 g: 0.4
             },
             {
-                title: "京东卡10元",
+                title: `京东卡10元`,
                 img: "./imgs/lottery_01.png",
                 g: 0.3
             },
@@ -77,10 +77,8 @@
         var luckyNum;
 
         $(".bj").on("transitionend", function () {
-            if (luckyNum) {
-                alert("恭喜您抽中了:" + arr[luckyNum].title);
-            }
-            luckNum = null;
+
+            alert("恭喜您抽中了:" + arr[luckyNum].title);
         });
 
         $(".btn").click(function () {
@@ -104,7 +102,7 @@
                     }
                 }
                 //转圈
-                var rotateDeg = (5 * 360) + (-(luckyNum * 45) + 22.5);
+                var rotateDeg = (5 * 360) + (-(luckyNum * 45) - 22.5);
 
                 $(".bj").css({
                     transition: "all 5s ease-in-out",
